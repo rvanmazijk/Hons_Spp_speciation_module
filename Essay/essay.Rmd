@@ -1,14 +1,6 @@
 ---
-title: "Alpha-taxonomy in world mammals"
-subtitle: |
-    | Trends in methods, species concepts, and speciation study from the 1970s to today
-    | BSc Hons Biological Sciences
-    | Species & Speciation module deliverable
-    | For A/Prof A.M. Muasya
-author: |
-    | Ruan van Mazijk
-    | <VMZRUA001@myuct.ac.za>
-date: '`r format(Sys.time(), "%d %B %Y")`'
+title: "**Alpha-taxonomy in world mammals**"
+subtitle: "Trends in methods, species concepts, and speciation study from the 1970s to today"
 output:
   pdf_document:
     latex_engine: xelatex
@@ -27,6 +19,16 @@ header-includes:
   - \setlength{\columnsep}{30pt}
   - \twocolumn
 ---
+
+\noindent \textbf{R. van Mazijk}                  \par
+\footnotesize
+\noindent `r format(Sys.time(), "%Y-%m-%d")`      \par
+\noindent <VMZRUA001@myuct.ac.za>                 \par
+\noindent BSc Hons Biological Sciences            \par
+\noindent Species & Speciation module deliverable \par
+\noindent For Associate Prof A.M. Muasya          \par
+\noindent \hrulefill
+\normalsize
 
 # Introduction
 
