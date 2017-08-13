@@ -1,0 +1,38 @@
+---
+title: "Alpha-taxonomy in world mammals"
+subtitle: |
+    | Trends in methods, species concepts, and speciation study from the 1970s to today
+    | BSc Hons Biological Sciences
+    | Species & Speciation module deliverable
+    | For A/Prof A.M. Muasya
+author: |
+    | Ruan van Mazijk
+    | <VMZRUA001@myuct.ac.za>
+date: '`r format(Sys.time(), "%d %B %Y")`'
+output:
+  pdf_document:
+    latex_engine: xelatex
+    fig_caption: true
+fontsize: 11pt
+geometry: margin = 0.5in, a4paper
+mainfont: Calibri
+csl: harvard-university-of-cape-town-rvm_2017-04-20.csl
+bibliography: ~/Documents/Bibliographies/Spp_speciation_deliverable.bib
+header-includes:
+  - \usepackage{hanging}
+  - \usepackage{lipsum}
+  - \setlength{\parindent}{15pt}
+  - \setlength{\parskip}{0pt}
+  - \renewcommand{\baselinestretch}{1}
+  - \setlength{\columnsep}{30pt}
+  - \twocolumn
+---
+
+# Introduction
+
+\lipsum
+
+\noindent \hrulefill
+
+# \small References
+\footnotesize \hangparas{15pt}{1}
