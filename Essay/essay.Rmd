@@ -30,11 +30,66 @@ header-includes:
 \noindent \hrulefill
 \normalsize
 
+
+<!--
+
+Mammal Species of the World, 3rd Edition (MSW3); 1702—2005; It’s something!; D. E. Wilson & D.-A. M.Reeder (eds.). Mammal Species of the World. A Taxonomic and Geographic Reference, 3rd Edition. John Hopkins University Press, Baltimore; https://www.departments.bucknell.edu/biology/resources/msw3/
+
+<usingR>
+
+<fig. 1 focal orders>
+
+“Mammalogists, for the most part, have avoided debate on species concepts, but most investigators follow a particular species definition”; —Baker & Bradley 2006 (J. Mammal. 87(4):643–662)
+
+BSC -> PSC } entirely not this simple; Little explicit consideration from majority of mammalogists
+
+-> GSC (Genetic Species Concept Baker & Bradley 2006 (J. Mammal. 87(4):643–662)); “a group of genetically compatible interbreeding natural populations that is genetically isolated from other such groups”; ≠ reproductive isolation (necessarily); e.g. Thomomys pocket gophers; But there is debate... “[…] 100% diagnosable: they have fixed heritable differences between them […]”; “[…] offer a repeatable, falsifiable definition of species […]”; Groves 2012. American Journal of Primatology. 74(8):687–691.
+
+Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But still influential! e.g. in allopatry); Phenetics still common, or 1st port-of-call e.g. Lew et al. 2006. J. Mammal. 87(2):224–237; 2-4) Karyotype studies, Allozymes, DNA sequencing; costly in the early days, but soon very doable!! very objective!; can highlight cryptic species; taxonomic infaltion?
+
+Cape
+Myosorex longicaudatus
+	Meester & Dippenaar 1978. Annals of the Transvaal Museum. 31(4):30–42
+	Knysna
+	Morphology & geography
+
+Africa
+Primates, Rodents, Soricom.
+
+Global?
+<more>
+e.g. cytochrome-b (mtDNA) Carvalho et al. 2009. Phylogeny of Thylamys (Didelphimorphia, Didelphidae) species, with special reference to Thylamys karimii
+
+“The increase in the number of named species […] [means] that we have increased our perception and understanding of the diversity of the primates.” Rylands et al. 2012. International Zoo Yearbook. 46(1):11–24
+
+cytochrome-b in rodents
+Re: GSC sensu Baker & Bradley 2006 (J. of Mammal. 87(4):643–662),
+	        Bradley & Baker 2001 (J. of Mammal. 82(4):960–973)
+
+multi-locus work in Afro-tropical shrews
+cytochrome-b, among others,
+	Jacquet et al. 2012. Zool. J. Linn. Soc. 166(3):672–687
+
+Conclude:
+Molecular species delimitation is relevant to PSC/ESC/BSC
+Ecologically relevant speciation processes (e.g. bats) are case-by-case
+Little generality to be drawn about speciation from the alpha-taxonomic methods 
+Genetic sequencing & PSC (or at least ESC)
+Good taxonomic inflation!
+Genomics is up-and-coming! e.g. Murphy et al. 2004
+
+-->
+
+
 # Introduction
 
-\lipsum
+
+
+
 
 \noindent \hrulefill
 
 # \small References
 \footnotesize \hangparas{15pt}{1}
+
+
