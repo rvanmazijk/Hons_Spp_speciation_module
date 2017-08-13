@@ -1,0 +1,119 @@
+[
+{
+    "Journal": "J. Zool.",
+    "search_query": "mammal [Keywords] AND taxonomy [Keywords] [Between 1975-01-01 and 2017-08-10]",
+    "results": [
+        {
+            "citation": "J. Zool., Lond. (2003) 260, 245–257",
+            "method": "NA [beta-taxonomy]",
+            "taxa": [
+                "Lipotyphla",
+                "Insectivora",
+                "[...] the shrews (Soricidae), the molesand desmans (Talpidae), the hedgehogs and gymnures(Erinaceidae), the tenrecs (Tenrecidae), the goldenmoles (Chrysochloridae) and the enigmatic solenodons(Solenodontidae)"
+            ]
+        },
+        {
+            "citation": "Rylands, A. B., Mittermeier, R. A. and Silva, J. S. (2012), Neotropical primates: taxonomy and recently described species and subspecies. Int. Zoo Yb., 46: 11–24. doi:10.1111/j.1748-1090.2011.00152.x",
+            "method": "NA [review]",
+            "taxa": "Primates (Neotropical)"
+        },
+        {
+            "citation": "J. Zool., Lond. (2005) 265, 113–132",
+            "taxa": "Kobus anselli (Artiodactyla)",
+            "method": [
+                "ESC",
+                "morphometrics",
+                "PCA"
+            ],
+            "notes": "ESC is common for Chiropterans and antelopes (Cotteril, 2001a,b, 2002a, 2003,a-c)"
+        }
+    ]
+},
+{
+    "Journal": "J. Mammal.",
+    "search_query": "new species [Sort by Date - Oldest First] [GOTO p. 29 of search results]",
+    "results": [
+        {
+            "citation": "Journal of Mammalogy, Volume 56, Issue 4, 18 November 1975, Pages 781–820",
+            "method": [
+                "morphology",
+                "palaeontology"
+            ],
+            "taxa": [
+                "Mammalia",
+                "extinct"
+            ]
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 57, Issue 1, 27 February 1976, Pages 103–132",
+            "method": [
+                "morphology",
+                "morphometrics",
+                "multivariate techinques"
+            ],
+            "taxa": [
+                "Neotoma spp.",
+                "N. floridana species-group",
+                "woodrats",
+                "Rodentia",
+                "hybridisation"
+            ]
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 57, Issue 3, 27 August 1976, Pages 562–566",
+            "method": "morphology",
+            "taxa": [
+                "Rodentia",
+                "Perognathus: Heteromyidae"
+            ]
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 57, Issue 4, 10 December 1976, Pages 687–707",
+            "method": "morphology",
+            "taxa": "Chiroptera"
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 57, Issue 4, 10 December 1976, Pages 664–676",
+            "method": [
+                "morphology",
+                "palaeontology"
+            ],
+            "taxa": [
+                "Felis (Felidae)",
+                "Carnivora"
+            ]
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 58, Issue 2, 31 May 1977, Pages 188–201",
+            "method": [
+                "cytology",
+                "karyotype",
+                "morphology"
+            ],
+            "taxa": "Rodentia"
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 58, Issue 3, 20 August 1977, Pages 321–333",
+            "method": "morphology",
+            "taxa": "Rodentia"
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 58, Issue 3, 20 August 1977, Pages 291–308",
+            "method": [
+                "morphology",
+                "dentition"
+            ],
+            "taxa": "Artiodactyla"
+        },
+        {
+            "citation": "Journal of Mammalogy, Volume 58, Issue 3, 20 August 1977, Pages 263–268",
+            "method": [
+                "morphology",
+                "cytology",
+                "karyotype"
+            ],
+            "taxa": "Rodentia: Muridae"
+        }
+    ]
+}
+]
