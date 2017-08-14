@@ -113,6 +113,12 @@
                 "karyotype"
             ],
             "taxa": "Rodentia: Muridae"
+        },
+        {
+            "notes": [
+                "https://academic.oup.com/jmammal/search-results?page=30&q=new+species&sort=Date+–+Oldest+First&fl_SiteID=5404",
+                "continue from p. 30 of search results in this query for J. Mammal."
+            ]
         }
     ]
 }

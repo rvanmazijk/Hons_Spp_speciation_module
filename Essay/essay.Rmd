@@ -20,16 +20,17 @@ header-includes:
   - \twocolumn
 ---
 
-\noindent \textbf{R. van Mazijk}                  \par
+\par \noindent \textbf{R. van Mazijk}
 \footnotesize
-\noindent `r format(Sys.time(), "%Y-%m-%d")`      \par
-\noindent <VMZRUA001@myuct.ac.za>                 \par
-\noindent BSc Hons Biological Sciences            \par
-\noindent Species & Speciation module deliverable \par
-\noindent For Associate Prof A.M. Muasya          \par
-\noindent \hrulefill
+\par \noindent `r format(Sys.time(), "%Y-%m-%d")`
+\par \noindent <VMZRUA001@myuct.ac.za>
+\par \noindent BSc Hons Biological Sciences
+\par \noindent Species & Speciation module deliverable
+\par \noindent For Associate Prof A.M. Muasya
+\par \noindent \hrulefill
 \normalsize
 
+# Introduction
 
 <!--
 
@@ -80,16 +81,7 @@ Genomics is up-and-coming! e.g. Murphy et al. 2004
 
 -->
 
-
-# Introduction
-
-
-
-
-
 \noindent \hrulefill
 
 # \small References
 \footnotesize \hangparas{15pt}{1}
-
-
