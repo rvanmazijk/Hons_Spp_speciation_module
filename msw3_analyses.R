@@ -42,17 +42,13 @@ plot_new_taxa <- function(x, rank, from = 1975, ylab = "taxa", ymax = 22,
         x <- x[x[, by][[1]] %in% which_by, ]
     }
     x %>%
-        filter(
-            TaxonLevel == rank,
-            Date >= from,
-            Order %in% if (is.null(which_orders)) x$Order
-                       else which_orders
-        ) %>%
+        filter(TaxonLevel == rank,
+               Date >= from,
+               Order %in% if (is.null(which_orders)) x$Order
+                          else which_orders) %>%
         ggplot() +
-        geom_histogram(
-            aes_string(x = "Date", fill = by),
-            bins = 2005 - from
-        ) +
+        geom_histogram(aes_string(x = "Date", fill = by),
+                       bins = 2005 - from) +
         scale_fill_discrete(drop = drop_fill) +
         xlim(from, 2005) +
         ylim(0, ymax) +
@@ -61,19 +57,15 @@ plot_new_taxa <- function(x, rank, from = 1975, ylab = "taxa", ymax = 22,
         ggtitle(label = if (rank != "SPECIES") rank else NULL) +
         facet_wrap(by, drop = drop_facet) +
         theme_bw() +
-        theme(
-            legend.position = "none",
-            axis.text.x = element_text(angle = 90),
-            panel.grid = element_blank()
-        )
+        theme(legend.position = "none",
+              axis.text.x = element_text(angle = 90),
+              panel.grid = element_blank())
 }
 save_new_taxa <- function(x, ranks, suffix = "", width = 8, height = 6) {
     pmap(list(x = x, y = ranks), function(x, y) {
-        ggsave(
-            width = width, height = height,
-            plot = x,
-            filename = here(glue("new_taxa_msw_{y}{suffix}.pdf"))
-        )
+        ggsave(width = width, height = height,
+               plot = x,
+               filename = here(glue("new_taxa_msw_{y}{suffix}.pdf")))
     })
 }
 get_the_coolest <- function(x, rank, by = "SPECIES", cutoff = 10) {
@@ -108,11 +100,9 @@ levels(msw$TaxonLevel)
 levels(msw$Order)
 
 # The ranks I want to see ~ time
-all_ranks <- c(
-    "FAMILY", "SUBFAMILY", "TRIBE",
-    "GENUS", "SUBGENUS",
-    "SPECIES", "SUBSPECIES"
-)
+all_ranks <- c("FAMILY", "SUBFAMILY", "TRIBE",
+               "GENUS", "SUBGENUS",
+               "SPECIES", "SUBSPECIES")
 
 if (do_plots) {
 
@@ -141,11 +131,9 @@ if (do_plots) {
         nrow()  # 564
     # And for the "cool" orders:
     msw %>%
-        filter(
-            TaxonLevel == "SPECIES",
-            Date >= 1975,
-            Order %in% get_the_coolest(msw, "Order")
-        ) %>%
+        filter(TaxonLevel == "SPECIES",
+               Date >= 1975,
+               Order %in% get_the_coolest(msw, "Order")) %>%
         nrow()  # 533
     
     
@@ -169,18 +157,14 @@ if (do_plots) {
 # Plot no. taxa ~ time GIVEN diversity in taxa ---------------------------------
 
 richnesses <- msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1975,
-        Order %in% get_the_coolest(msw, "Order")
-    ) %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order")) %>% 
     count(Order)
 new_spp_counts <- msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1975,
-        Order %in% get_the_coolest(msw, "Order")
-    ) %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order")) %>% 
     select(Date, Order) %>%
     group_by(Order) %>%
     count(Date)
@@ -190,12 +174,10 @@ for (i in 1:nrow(new_spp_counts)) {
         new_spp_counts$n[i] %>%
         divide_by(richnesses$n[richnesses$Order == new_spp_counts$Order[i]])
 }
-new_spp_counts <- tibble(
-    Order = new_spp_counts$Order,
-    Date = new_spp_counts$Date,
-    n = new_spp_counts$n,
-    rich_stdised_n
-)
+new_spp_counts <- tibble(Order = new_spp_counts$Order,
+                         Date = new_spp_counts$Date,
+                         n = new_spp_counts$n,
+                         rich_stdised_n)
 
 if (do_plots) {
     ggplot(new_spp_counts) +
@@ -205,29 +187,23 @@ if (do_plots) {
         ylab(glue("No. new spp. ÷ richness")) +
         facet_wrap(~ Order) +
         theme_bw() +
-        theme(
-            legend.position = "none",
-            axis.text.x = element_text(angle = 90),
-            panel.grid = element_blank()
-        )
+        theme(legend.position = "none",
+              axis.text.x = element_text(angle = 90),
+              panel.grid = element_blank())
 }
 
 # Check rich_stdised_n for all orders ------------------------------------------
 # (except those with ONLY 1 species discovery in the 1975:2005 period)
 
 richnesses <- msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1975,
-        Order %in% get_the_coolest(msw, "Order", cutoff = 2)
-    ) %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order", cutoff = 2)) %>%
     count(Order)
 new_spp_counts <- msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1975,
-        Order %in% get_the_coolest(msw, "Order", cutoff = 2)
-    ) %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order", cutoff = 2)) %>% 
     select(Date, Order) %>%
     group_by(Order) %>%
     count(Date)
@@ -237,12 +213,10 @@ for (i in 1:nrow(new_spp_counts)) {
         new_spp_counts$n[i] %>%
         divide_by(richnesses$n[richnesses$Order == new_spp_counts$Order[i]])
 }
-new_spp_counts <- tibble(
-    Order = new_spp_counts$Order,
-    Date = new_spp_counts$Date,
-    n = new_spp_counts$n,
-    rich_stdised_n
-)
+new_spp_counts <- tibble(Order = new_spp_counts$Order,
+                         Date = new_spp_counts$Date,
+                         n = new_spp_counts$n,
+                         rich_stdised_n)
 
 if (do_plots) {
     ggplot(new_spp_counts) +
@@ -252,21 +226,17 @@ if (do_plots) {
         ylab(glue("No. new spp. ÷ richness")) +
         facet_wrap(~ Order) +
         theme_bw() +
-        theme(
-            legend.position = "none",
-            axis.text.x = element_text(angle = 90),
-            panel.grid = element_blank()
-        )
+        theme(legend.position = "none",
+              axis.text.x = element_text(angle = 90),
+              panel.grid = element_blank())
 }
 
 # What about log(count(Date) + 1)? ---------------------------------------------
 
 new_spp_counts <- msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1975,
-        Order %in% get_the_coolest(msw, "Order", cutoff = 2)
-    ) %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order", cutoff = 2)) %>% 
     select(Date, Order) %>%
     group_by(Order) %>%
     count(Date) %>%
@@ -282,11 +252,9 @@ if (do_plots) {
         ylab(expression(paste(italic("log"["e"]), "[ No. new spp. + 1 ]"))) +
         facet_wrap(~ Order) +
         theme_bw() +
-        theme(
-            legend.position = "none",
-            axis.text.x = element_text(angle = 90),
-            panel.grid = element_blank()
-        )
+        theme(legend.position = "none",
+              axis.text.x = element_text(angle = 90),
+              panel.grid = element_blank())
 }
 
 
@@ -326,11 +294,9 @@ if (do_plots) {
     # For the coolest_orders' records since 1975
     map(get_the_coolest(msw, "Order"), function(x) {
         msw %>%
-            filter(
-                TaxonLevel == "SPECIES",
-                Date >= 1975,
-                Order %in% x
-            ) %>%
+            filter(TaxonLevel == "SPECIES",
+                   Date >= 1975,
+                   Order %in% x) %>%
             count(CitationName) %>%
             arrange(desc(n)) %T>%
             write.csv(glue("msw3_CitationName_frequencies_{x}_sp_since1975.csv"))
@@ -405,18 +371,14 @@ if (do_plots) {
 }
 # No. new spp. total?
 afr_sl_msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1975,
-        Order %in% get_the_coolest(msw, "Order")
-    ) %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order")) %>% 
     nrow()  # 523
 afr_sl_msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1915,
-        Order %in% get_the_coolest(msw, "Order")
-    ) %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1915,
+           Order %in% get_the_coolest(msw, "Order")) %>% 
     nrow()  # 93
 
 
