@@ -58,7 +58,7 @@ plot_new_taxa <- function(x, rank, from = 1975, ylab = "taxa", ymax = 22,
         ylim(0, ymax) +
         xlab("Year") +
         ylab(glue("No. new {ylab}")) +
-        ggtitle(rank) +
+        ggtitle(label = if (rank != "SPECIES") rank else NULL) +
         facet_wrap(by, drop = drop_facet) +
         theme_bw() +
         theme(
