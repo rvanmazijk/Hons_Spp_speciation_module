@@ -72,9 +72,9 @@ There is a subset of mammal order that are most taxonomically "active" (Figure \
 
 ## Mammalogical species concepts
 
-The species concept or criteria a taxonomist follows can affect the number of species delimited. Supposing there is reality to species, and that two lineages being different species is grounded in reality, species concepts enable us to estimate when this occurs. Following the reasoning of @DeQueiroz2011, different species concepts each deal with different lines of empirical evidence. These each describe different aspects of the speciation process, such that in each the criteria for delimiting two different species is based on some property of each lineage that would differ between them if they were separate species [@DeQueiroz2001]. Consequently, different species concepts all encapsulate *some* aspect of dissimilarity between two lineages as a consequence of speciation. @DeQueiroz2011 argues that should any one criterion be met, it is parsimonious to assume speciation has begun, and that the bifurcation of the lineages be appropriately regarded with a species delineation. This aside, consistency in species concepts in taxonomic research is still desirable (if perhaps unattainable<!--ref from module readings-->). The case with mammal taxonomists is summarised well:
+The species concept or criteria a taxonomist follows can affect the number of species delimited. Supposing there is reality to species, and that two lineages being different species is grounded in reality, species concepts enable us to estimate when this occurs. Following the reasoning of @DeQueiroz2011, different species concepts each deal with different lines of empirical evidence. These each describe different aspects of the speciation process, such that in each the criteria for delimiting two different species is based on some property of each lineage that would differ between them if they were separate species [@DeQueiroz2011]. Consequently, different species concepts all encapsulate *some* aspect of dissimilarity between two lineages as a consequence of speciation. @DeQueiroz2011 argues that should any one criterion be met, it is parsimonious to assume speciation has begun, and that the bifurcation of the lineages be appropriately regarded with a species delineation. This aside, consistency in species concepts in taxonomic research is still desirable (if perhaps unattainable<!--ref from module readings-->). The case with mammal taxonomists is summarised well:
 
-\footnotesize
+\small
 
 > \textit{Mammalogists, for the most part, have avoided debate on species concepts, but most investigators follow a particular species definition}
 
@@ -82,9 +82,19 @@ The species concept or criteria a taxonomist follows can affect the number of sp
 
 \noindent @Baker2006 make this somewhat alarming statement about the *modus operandi* of mammal taxonomists. It appears that mammal taxonomy, like many fields of biology, has agreed-upon nomenclatural standards, but has little consensus on which species concepts to use when delineating species. This precludes ready comparison of, say, mice species vs bovid species, as there is no guarantee that "species" represent similarly biologically important units. <!--Perhaps this isn't a bad thing? But I suppose that depends on the taxonomic scale at which SCs fail at facilitating comparison-->
 
-BSC -> PSC } entirely not this simple; Little explicit consideration from majority of mammalogists
+<!--Idiosyncratic/researcher-specific species concept usage...-->
 
--> GSC (Genetic Species Concept Baker & Bradley 2006 (J. Mammal. 87(4):643–662)); “a group of genetically compatible interbreeding natural populations that is genetically isolated from other such groups”; ≠ reproductive isolation (necessarily); e.g. Thomomys pocket gophers; But there is debate... “[…] 100% diagnosable: they have fixed heritable differences between them […]”; “[…] offer a repeatable, falsifiable definition of species […]”; Groves 2012. American Journal of Primatology. 74(8):687–691.
+For the most part, mammologists historically<!--when?--> followed (if only loosely) the Biological Speciec Concept (BSC)<!--ref Mayr-->. <!--elaborate--> The Phylogenetic Species Concept (PSC) contrasts with the BSC in focussing on an explicitly evolutionary, lineage based criterion<!--ref--> <!--elaborate on allopatry solution that the PSC gives-->. The PSC thus now dominates in mammalogy, as the most common species concept used or referred to<!--ref-->. The transition from majority usage of the BSC to PSC in mammal taxonomy is entirely not so simple, however. There is little explicit consideration of species concepts by the majority of mammal taxonomists<!--ref-->.
+
+@Baker2006 themseleves put forward the Genetic Species Concept (GSC), wherein a species represents:
+
+\small
+
+> \textit{[...] a group of genetically compatible interbreeding natural populations that is genetically isolated from other such groups.}
+
+\normalsize
+
+\noindent This does not necessarily imply reproductive isolation<!--elaborate-->. E.g. Thomomys pocket gophers; But there is debate... “[…] 100% diagnosable: they have fixed heritable differences between them […]”; “[…] offer a repeatable, falsifiable definition of species […]”; Groves 2012. American Journal of Primatology. 74(8):687–691.
 
 
 ## Lines of evidence
@@ -107,7 +117,11 @@ Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But 
 - e.g. cytochrome-b (mtDNA)
     - Carvalho et al. 2009. Phylogeny of Thylamys (Didelphimorphia, Didelphidae) species, with special reference to Thylamys karimii
 
-> \textit{The increase in the number of named species [...] [means] that we have increased our perception and understanding of the diversity of the primates.}---Rylands et al. 2012. International Zoo Yearbook. 46(1):11–24
+\small
+
+> \textit{The increase in the number of named species [means] that we have increased our perception and understanding of the diversity of the primates.}---Rylands et al. 2012. International Zoo Yearbook. 46(1):11–24
+
+\normalsize
 
 - cytochrome-b in rodents
     - Re: GSC sensu Baker & Bradley 2006 (J. of Mammal. 87(4):643–662), Bradley & Baker 2001 (J. of Mammal. 82(4):960–973)

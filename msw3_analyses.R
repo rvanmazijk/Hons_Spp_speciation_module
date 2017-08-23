@@ -35,7 +35,6 @@ msw$Order %<>%
 
 # New functions for plots ------------------------------------------------------
 
-
 plot_new_taxa <- function(x, rank, from = 1975, ylab = "taxa", ymax = 22,
                           by = "Order", which_orders = NULL, which_by = NULL,
                           drop_fill = FALSE, drop_facet = FALSE) {
@@ -274,7 +273,8 @@ if (do_plots) {
     
     # For sub-sp., species OR genus records since 1975
     msw %>%
-        filter(TaxonLevel %in% c("SUBSPECIES", "SPECIES", "GENUS"), Date >= 1975) %>%
+        filter(TaxonLevel %in% c("SUBSPECIES", "SPECIES", "GENUS"),
+               Date >= 1975) %>%
         count(CitationName) %>%
         arrange(desc(n)) %T>%
         write.csv("msw3_CitationName_frequencies_subspORspORgen_since1975.csv")
