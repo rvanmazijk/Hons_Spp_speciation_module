@@ -1,41 +1,60 @@
 ---
-title: "**Alpha-taxonomy in world mammals**"
-subtitle: "Trends in methods, species concepts, and speciation study from the 1970s to today"
+title: "Alpha-taxonomy in world mammals"
+#subtitle: "Trends in methods, species concepts, and speciation study from the 1970s to today"
 output:
   pdf_document:
     latex_engine: xelatex
     fig_caption: true
-fontsize: 11pt
-geometry: margin = 0.5in, a4paper
-mainfont: Calibri
-csl: harvard-university-of-cape-town-rvm_2017-04-20.csl
-bibliography: ~/Documents/Bibliographies/Spp_speciation_deliverable.bib
+fontsize: 12pt
+geometry: margin = 0.75in, a4paper
+mainfont: Times New Roman
+csl: harvard-university-of-cape-town-rvm_2017-08-15.csl
+bibliography: Spp_speciation_deliverable.bib
 header-includes:
-  - \usepackage{hanging}
   - \usepackage{lipsum}
-  - \setlength{\parindent}{15pt}
+  # Institutional logos as a wrapping figure
+  - \usepackage{wrapfig}
+  # Hanging indentation for references §
+  - \usepackage{hanging}
+  # Formatting
+  - \setlength{\parindent}{30pt}
   - \setlength{\parskip}{0pt}
-  - \renewcommand{\baselinestretch}{1}
-  - \setlength{\columnsep}{30pt}
-  - \twocolumn
+  - \renewcommand{\baselinestretch}{1.5}
 ---
 
-\noindent \textbf{R. van Mazijk}                  \par
+\begin{wrapfigure}{r}{50pt}  % this figure will be at the left
+    \par \includegraphics[width=1.25cm, height=1.25cm]{uct_logo.png}
+    \par \includegraphics[width=1.25cm, height=1.25cm]{biosci_logo_crop.png}
+\end{wrapfigure}
+
+\par \textbf{R. van Mazijk}
+\par VMZRUA001@myuct.ac.za
+
 \footnotesize
-\noindent `r format(Sys.time(), "%Y-%m-%d")`      \par
-\noindent <VMZRUA001@myuct.ac.za>                 \par
-\noindent BSc Hons Biological Sciences            \par
-\noindent Species & Speciation module deliverable \par
-\noindent For Associate Prof A.M. Muasya          \par
-\noindent \hrulefill
+\par \noindent `r format(Sys.time(), "%Y-%m-%d")`
+\par \noindent BSc Hons Biological Sciences
+\par \noindent Species & speciation module deliverable
+\par \noindent For A/Prof A.M. Muasya
+
+\par \noindent \hrulefill
+
 \normalsize
 
+## Introduction
+
+Herein I discuss the progress of mammalian alpha-taxonomy from 1975 to 2005<!--and up to 2017-->. First, I discuss the new species and groups discovered in this period. Second, I focus on the methods employed to diagnose and delimit these mammal species and how these have changes over the the past 30 to 40 years. Third, I will attempt to draw conclusions, if possible, about the speciation mechanisms at work in mammal populations based on the evidence use to delimit those mammal species. And lastly, I will frame these discussions in the context of the species concepts (or lack thereof) typically used in mammalogy and mammalian taxonomy.
+
+*Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?!--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for exploration and visualisation [@Wickham2017] ...
+
+## Mammal discoveries, 1975---2005
+
+## Lines of evidence
+
+## Modes of mammalian speciation
+
+## Mammalogical species concepts
 
 <!--
-
-Mammal Species of the World, 3rd Edition (MSW3); 1702—2005; It’s something!; D. E. Wilson & D.-A. M.Reeder (eds.). Mammal Species of the World. A Taxonomic and Geographic Reference, 3rd Edition. John Hopkins University Press, Baltimore; https://www.departments.bucknell.edu/biology/resources/msw3/
-
-<usingR>
 
 <fig. 1 focal orders>
 
@@ -80,16 +99,10 @@ Genomics is up-and-coming! e.g. Murphy et al. 2004
 
 -->
 
-
-# Introduction
-
-
-
+## Concluding remarks
 
 
 \noindent \hrulefill
 
 # \small References
 \footnotesize \hangparas{15pt}{1}
-
-
