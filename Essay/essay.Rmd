@@ -31,7 +31,9 @@ here()
 ```
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
 knitr::opts_knit$set(root.dir = here())
 ```
 
@@ -63,22 +65,14 @@ p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 
 \noindent Herein I discuss the progress of mammalian alpha-taxonomy from 1975 to 2005<!--and up to 2017-->. First, I focus on the methods employed to diagnose and delimit these mammal species and how these have changes over the the past 30 to 40 years. Second, I discuss the new species and groups discovered in this period. Third, I will attempt to draw conclusions, if possible, about the speciation mechanisms at work in mammal populations based on the evidence use to delimit those mammal species. I will frame these discussions in the context of the species concepts (or lack thereof) typically used in mammalogy and mammalian taxonomy.
 
-*Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for exploration and visualisation [@Wickham2017]. Not only does MSW3 enable exploration of mammal taxonomic discovery through time, it also facilitated easier literature searches, providing common journals in which mammal descriptions are published.
+*Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for data exploration and visualisation [@Wickham2017]. Not only does MSW3 enable exploration of mammal taxonomic discovery through time, it also facilitated easier literature searches, providing common journals in which mammal descriptions are published.
 
 There is a subset of mammal order that are most taxonomically "active" (Figure \ref{taxa-thru-time}), such that there are only eight orders in which $\geq 10$ new species were described in the period 1975---2005. This is worth bearing in mind when discussing mammalian taxonomy; there is a taxonomic bias to, either, the rate of discovery in certain taxa, or the species richness of certain taxa. Either way, species concepts have bearing on these numbers, discussed below.
 
-```{r taxa-thru-time, fig.height = 4, fig.width = 4, fig.cap ='\\label{taxa-thru-time} \\footnotesize Bar-plots of the number of new species (\\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.'}
-# TODO: add order-animal silhouettes to facets?
-plot_new_taxa(msw, "SPECIES",
-    by = "Order",
-    which_orders = get_the_coolest(msw, "Order"),
-    ylab = "spp.",
-    drop_fill = TRUE,
-    drop_facet = TRUE)
-```
-
 
 ## Mammalogical species concepts
+
+The species concept or criteria a taxonomist follows can affect the number of species delimited. Supposing there is reality to species, and that two lineages being different species is grounded in reality, species concepts enable us to estimate when this occurs. Following the reasoning of @DeQueiroz2011, different species concepts each deal with different lines of empirical evidence. These each describe different aspects of the speciation process, such that in each the criteria for delimiting two different species is based on some property of each lineage that would differ between them if they were separate species [@DeQueiroz2001]. Consequently, different species concepts all encapsulate *some* aspect of dissimilarity between two lineages as a consequence of speciation. @DeQueiroz2011 argues that should any one criterion be met, it is parsimonious to assume speciation has begun, and that the bifurcation of the lineages be appropriately regarded with a species delineation. This aside, consistency in species concepts in taxonomic research is still desirable (if perhaps unattainable<!--ref from module readings-->). The case with mammal taxonomists is summarised well:
 
 \footnotesize
 
@@ -86,7 +80,7 @@ plot_new_taxa(msw, "SPECIES",
 
 \normalsize
 
-\noindent @Baker2006 make this somewhat alarming statement about the *modus operandi* of mammal taxonomists. It appears that mammal taxonomy, like many fields of biology, has agreed upon nomenclaturial<!--sp?--> standards, but has little consensus on which species concepts to use when delineating species. This precludes ready comparison of, say, mice species vs bovid species, as there is no guarantee that "species" represent similarly biologically important units. <!--Perhaps this isn't a bad thing? But I suppose that depends on the taxonomic scale at which SCs fail at facilitating comparison-->
+\noindent @Baker2006 make this somewhat alarming statement about the *modus operandi* of mammal taxonomists. It appears that mammal taxonomy, like many fields of biology, has agreed-upon nomenclatural standards, but has little consensus on which species concepts to use when delineating species. This precludes ready comparison of, say, mice species vs bovid species, as there is no guarantee that "species" represent similarly biologically important units. <!--Perhaps this isn't a bad thing? But I suppose that depends on the taxonomic scale at which SCs fail at facilitating comparison-->
 
 BSC -> PSC } entirely not this simple; Little explicit consideration from majority of mammalogists
 
@@ -137,6 +131,18 @@ Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But 
 
 
 \noindent \hrulefill
+
+
+```{r taxa-thru-time, fig.height = 4, fig.width = 4, fig.cap ='\\label{taxa-thru-time} \\footnotesize Bar-plots of the number of new species (\\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.'}
+# TODO: add order-animal silhouettes to facets?
+plot_new_taxa(msw, "SPECIES",
+    by = "Order",
+    which_orders = get_the_coolest(msw, "Order"),
+    ylab = "spp.",
+    drop_fill = TRUE,
+    drop_facet = TRUE)
+```
+
 
 # \small References
 \footnotesize \hangparas{15pt}{1}

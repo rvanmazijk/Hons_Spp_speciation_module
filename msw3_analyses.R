@@ -35,6 +35,7 @@ msw$Order %<>%
 
 # New functions for plots ------------------------------------------------------
 
+
 plot_new_taxa <- function(x, rank, from = 1975, ylab = "taxa", ymax = 22,
                           by = "Order", which_orders = NULL, which_by = NULL,
                           drop_fill = FALSE, drop_facet = FALSE) {
@@ -63,7 +64,8 @@ plot_new_taxa <- function(x, rank, from = 1975, ylab = "taxa", ymax = 22,
 }
 save_new_taxa <- function(x, ranks, suffix = "", width = 8, height = 6) {
     pmap(list(x = x, y = ranks), function(x, y) {
-        ggsave(width = width, height = height,
+        ggsave(width = width,
+               height = height,
                plot = x,
                filename = here(glue("new_taxa_msw_{y}{suffix}.pdf")))
     })
