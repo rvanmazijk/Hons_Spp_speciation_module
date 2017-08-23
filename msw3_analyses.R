@@ -12,9 +12,14 @@ if (!require(pacman)) install.packages("pacman")
 p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 
 
+# Specificities of the setup in this branch ------------------------------------
+
+set_here(here("Results"))
+do_plots <- FALSE  # used below to turn off all the plot devices for source()
+
 # Tidy up the MSW3 data --------------------------------------------------------
 
-msw <- as_tibble(read.csv(here("msw3-all.csv")))
+msw <- as_tibble(read.csv(here("Results", "msw3-all.csv")))
 names(msw)
 # I hate factors
 unfactor_to_chr <- function(x) as.character(x)
@@ -109,54 +114,58 @@ all_ranks <- c(
     "SPECIES", "SUBSPECIES"
 )
 
-# Make & save all those plots
-all_ranks %>%
-    map(plot_new_taxa, x = msw) %T>%
-    save_new_taxa(all_ranks)
+if (do_plots) {
 
-# Plot & save the HIGHLIGHTED no. new taxa ~ time
-all_ranks %>%
-    map(plot_new_taxa, x = msw, drop_facet = TRUE) %T>%
-    save_new_taxa(all_ranks, suffix = "2")
+    # Make & save all those plots
+    all_ranks %>%
+        map(plot_new_taxa, x = msw) %T>%
+        save_new_taxa(all_ranks)
+    
+    # Plot & save the HIGHLIGHTED no. new taxa ~ time
+    all_ranks %>%
+        map(plot_new_taxa, x = msw, drop_facet = TRUE) %T>%
+        save_new_taxa(all_ranks, suffix = "2")
+    
+    # Now let's REALLY highlight the new SPECIES each year
+    plot_new_taxa(msw, "SPECIES",
+        by = "Order",
+        which_orders = get_the_coolest(msw, "Order"),
+        ylab = "spp.",
+        drop_fill = TRUE,
+        drop_facet = TRUE) %>%
+        list() %>%
+        save_new_taxa("SPECIES", suffix = "3", width = 5, height = 4)
+    # Total no. new spp since 1975:
+    msw %>%
+        filter(TaxonLevel == "SPECIES", Date >= 1975) %>%
+        nrow()  # 564
+    # And for the "cool" orders:
+    msw %>%
+        filter(
+            TaxonLevel == "SPECIES",
+            Date >= 1975,
+            Order %in% get_the_coolest(msw, "Order")
+        ) %>%
+        nrow()  # 533
+    
+    
+    # And some more
+    plot_new_taxa(msw, "SPECIES",
+        by = "Family",
+        which_by = get_the_coolest(msw, "Family", cutoff = 7),  # aot cutoff of 10
+        drop_fill = TRUE,
+        drop_facet = TRUE)
+    
+    plot_new_taxa(x = msw, rank = "GENUS",
+        by = "Family",
+        which_by = get_the_coolest(msw, "Family", by = "GENUS", cutoff = 3),
+        which_orders = get_the_coolest(msw, "Order", by = "GENUS"),
+        drop_fill = TRUE,
+        drop_facet = TRUE)
+    
+}
 
-# Now let's REALLY highlight the new SPECIES each year
-plot_new_taxa(msw, "SPECIES",
-    by = "Order",
-    which_orders = get_the_coolest(msw, "Order"),
-    ylab = "spp.",
-    drop_fill = TRUE,
-    drop_facet = TRUE) %>%
-    list() %>%
-    save_new_taxa("SPECIES", suffix = "3", width = 5, height = 4)
-# Total no. new spp since 1975:
-msw %>%
-    filter(TaxonLevel == "SPECIES", Date >= 1975) %>%
-    nrow()  # 564
-# And for the "cool" orders:
-msw %>%
-    filter(
-        TaxonLevel == "SPECIES",
-        Date >= 1975,
-        Order %in% get_the_coolest(msw, "Order")
-    ) %>%
-    nrow()  # 533
-
-
-# And some more
-plot_new_taxa(msw, "SPECIES",
-    by = "Family",
-    which_by = get_the_coolest(msw, "Family", cutoff = 7),  # aot cutoff of 10
-    drop_fill = TRUE,
-    drop_facet = TRUE)
-
-plot_new_taxa(x = msw, rank = "GENUS",
-    by = "Family",
-    which_by = get_the_coolest(msw, "Family", by = "GENUS", cutoff = 3),
-    which_orders = get_the_coolest(msw, "Order", by = "GENUS"),
-    drop_fill = TRUE,
-    drop_facet = TRUE)
-
-
+    
 # Plot no. taxa ~ time GIVEN diversity in taxa ---------------------------------
 
 richnesses <- msw %>%
@@ -187,19 +196,21 @@ new_spp_counts <- tibble(
     n = new_spp_counts$n,
     rich_stdised_n
 )
-ggplot(new_spp_counts) +
-    geom_col(aes(x = Date, y = rich_stdised_n, fill = Order)) +
-    xlim(1975, 2005) +
-    xlab("Year") +
-    ylab(glue("No. new spp. ÷ richness")) +
-    facet_wrap(~ Order) +
-    theme_bw() +
-    theme(
-        legend.position = "none",
-        axis.text.x = element_text(angle = 90),
-        panel.grid = element_blank()
-    )
 
+if (do_plots) {
+    ggplot(new_spp_counts) +
+        geom_col(aes(x = Date, y = rich_stdised_n, fill = Order)) +
+        xlim(1975, 2005) +
+        xlab("Year") +
+        ylab(glue("No. new spp. ÷ richness")) +
+        facet_wrap(~ Order) +
+        theme_bw() +
+        theme(
+            legend.position = "none",
+            axis.text.x = element_text(angle = 90),
+            panel.grid = element_blank()
+        )
+}
 
 # Check rich_stdised_n for all orders ------------------------------------------
 # (except those with ONLY 1 species discovery in the 1975:2005 period)
@@ -232,19 +243,21 @@ new_spp_counts <- tibble(
     n = new_spp_counts$n,
     rich_stdised_n
 )
-ggplot(new_spp_counts) +
-    geom_col(aes(x = Date, y = rich_stdised_n, fill = Order)) +
-    xlim(1975, 2005) +
-    xlab("Year") +
-    ylab(glue("No. new spp. ÷ richness")) +
-    facet_wrap(~ Order) +
-    theme_bw() +
-    theme(
-        legend.position = "none",
-        axis.text.x = element_text(angle = 90),
-        panel.grid = element_blank()
-    )
 
+if (do_plots) {
+    ggplot(new_spp_counts) +
+        geom_col(aes(x = Date, y = rich_stdised_n, fill = Order)) +
+        xlim(1975, 2005) +
+        xlab("Year") +
+        ylab(glue("No. new spp. ÷ richness")) +
+        facet_wrap(~ Order) +
+        theme_bw() +
+        theme(
+            legend.position = "none",
+            axis.text.x = element_text(angle = 90),
+            panel.grid = element_blank()
+        )
+}
 
 # What about log(count(Date) + 1)? ---------------------------------------------
 
@@ -258,66 +271,72 @@ new_spp_counts <- msw %>%
     group_by(Order) %>%
     count(Date) %>%
     mutate(log_n = log(n + 1))
-new_spp_counts %>%
-    filter(Order %in% get_the_coolest(msw, "Order")) %>%
-    ggplot() +
-    geom_col(aes(x = Date, y = log_n, fill = Order)) +
-    xlim(1975, 2005) +
-    xlab("Year") +
-    ylab(expression(paste(italic("log"["e"]), "[ No. new spp. + 1 ]"))) +
-    facet_wrap(~ Order) +
-    theme_bw() +
-    theme(
-        legend.position = "none",
-        axis.text.x = element_text(angle = 90),
-        panel.grid = element_blank()
-    )
 
+if (do_plots) {
+    new_spp_counts %>%
+        filter(Order %in% get_the_coolest(msw, "Order")) %>%
+        ggplot() +
+        geom_col(aes(x = Date, y = log_n, fill = Order)) +
+        xlim(1975, 2005) +
+        xlab("Year") +
+        ylab(expression(paste(italic("log"["e"]), "[ No. new spp. + 1 ]"))) +
+        facet_wrap(~ Order) +
+        theme_bw() +
+        theme(
+            legend.position = "none",
+            axis.text.x = element_text(angle = 90),
+            panel.grid = element_blank()
+        )
+}
 
 
 
 
 # Get the most common journals -------------------------------------------------
 
-# For any taxon record in the whole MSW3 database
-msw$CitationName %>%
-    as.factor() %>%
-    summary() %T>%
-    write.csv("msw3_CitationName_frequencies.csv")
-
-# For sub-sp., species OR genus records since 1975
-msw %>%
-    filter(TaxonLevel %in% c("SUBSPECIES", "SPECIES", "GENUS"), Date >= 1975) %>%
-    count(CitationName) %>%
-    arrange(desc(n)) %T>%
-    write.csv("msw3_CitationName_frequencies_subspORspORgen_since1975.csv")
-
-# For species OR genus records since 1975
-msw %>%
-    filter(TaxonLevel %in% c("SPECIES", "GENUS"), Date >= 1975) %>%
-    count(CitationName) %>%
-    arrange(desc(n)) %T>%
-    write.csv("msw3_CitationName_frequencies_spORgen_since1975.csv")
-
-# For species records since 1975
-msw %>%
-    filter(TaxonLevel == "SPECIES", Date >= 1975) %>%
-    count(CitationName) %>%
-    arrange(desc(n)) %T>%
-    write.csv("msw3_CitationName_frequencies_sp_since1975.csv")
-
-# For the coolest_orders' records since 1975
-map(get_the_coolest(msw, "Order"), function(x) {
+if (do_plots) {
+    
+    # For any taxon record in the whole MSW3 database
+    msw$CitationName %>%
+        as.factor() %>%
+        summary() %T>%
+        write.csv("msw3_CitationName_frequencies.csv")
+    
+    # For sub-sp., species OR genus records since 1975
     msw %>%
-        filter(
-            TaxonLevel == "SPECIES",
-            Date >= 1975,
-            Order %in% x
-        ) %>%
+        filter(TaxonLevel %in% c("SUBSPECIES", "SPECIES", "GENUS"), Date >= 1975) %>%
         count(CitationName) %>%
         arrange(desc(n)) %T>%
-        write.csv(glue("msw3_CitationName_frequencies_{x}_sp_since1975.csv"))
-})
+        write.csv("msw3_CitationName_frequencies_subspORspORgen_since1975.csv")
+    
+    # For species OR genus records since 1975
+    msw %>%
+        filter(TaxonLevel %in% c("SPECIES", "GENUS"), Date >= 1975) %>%
+        count(CitationName) %>%
+        arrange(desc(n)) %T>%
+        write.csv("msw3_CitationName_frequencies_spORgen_since1975.csv")
+    
+    # For species records since 1975
+    msw %>%
+        filter(TaxonLevel == "SPECIES", Date >= 1975) %>%
+        count(CitationName) %>%
+        arrange(desc(n)) %T>%
+        write.csv("msw3_CitationName_frequencies_sp_since1975.csv")
+    
+    # For the coolest_orders' records since 1975
+    map(get_the_coolest(msw, "Order"), function(x) {
+        msw %>%
+            filter(
+                TaxonLevel == "SPECIES",
+                Date >= 1975,
+                Order %in% x
+            ) %>%
+            count(CitationName) %>%
+            arrange(desc(n)) %T>%
+            write.csv(glue("msw3_CitationName_frequencies_{x}_sp_since1975.csv"))
+    })
+
+}
 
 
 # Region information -----------------------------------------------------------
@@ -362,26 +381,28 @@ transv_msw %>%
 
 # Search "Afr" in all_columns
 afr_sl_msw <- search_all_columns(msw, "[Aa]fr")
-plot_new_taxa(afr_sl_msw, "SPECIES",
-    from = 1975,
-    by = "Order",
-    which_orders = get_the_coolest(msw, "Order"),
-    ylab = "spp.",
-    ymax = 3,
-    drop_fill = TRUE,
-    drop_facet = TRUE) %>%
-    list() %>%
-    save_new_taxa("SPECIES", suffix = "_AFRICA", width = 6, height = 2)
-plot_new_taxa(afr_sl_msw, "SPECIES",
-    from = 1915,
-    by = "Order",
-    which_orders = get_the_coolest(msw, "Order"),
-    ylab = "spp.",
-    ymax = 5,
-    drop_fill = TRUE,
-    drop_facet = TRUE) %>%
-    list() %>%
-    save_new_taxa("SPECIES", suffix = "_AFRICA2", width = 4, height = 4)
+if (do_plots) {
+    plot_new_taxa(afr_sl_msw, "SPECIES",
+        from = 1975,
+        by = "Order",
+        which_orders = get_the_coolest(msw, "Order"),
+        ylab = "spp.",
+        ymax = 3,
+        drop_fill = TRUE,
+        drop_facet = TRUE) %>%
+        list() %>%
+        save_new_taxa("SPECIES", suffix = "_AFRICA", width = 6, height = 2)
+    plot_new_taxa(afr_sl_msw, "SPECIES",
+        from = 1915,
+        by = "Order",
+        which_orders = get_the_coolest(msw, "Order"),
+        ylab = "spp.",
+        ymax = 5,
+        drop_fill = TRUE,
+        drop_facet = TRUE) %>%
+        list() %>%
+        save_new_taxa("SPECIES", suffix = "_AFRICA2", width = 4, height = 4)
+}
 # No. new spp. total?
 afr_sl_msw %>%
     filter(

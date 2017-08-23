@@ -22,6 +22,23 @@ header-includes:
   - \renewcommand{\baselinestretch}{1.5}
 ---
 
+```{r msw3-script-setup, include = FALSE}
+if (!require(pacman)) install.packages("pacman")
+library(pacman)
+p_load(here)
+here()
+```
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = here())
+```
+
+```{r source-msw3-script, include = FALSE, cache = TRUE}
+source("msw3_analyses.R")
+```
+
+
 \begin{wrapfigure}{r}{50pt}  % this figure will be at the left
     \par \includegraphics[width=1.25cm, height=1.25cm]{uct_logo.png}
     \par \includegraphics[width=1.25cm, height=1.25cm]{biosci_logo_crop.png}
@@ -38,13 +55,14 @@ header-includes:
 
 \par \noindent \hrulefill
 
+
 \normalsize
 
 ## Introduction
 
 Herein I discuss the progress of mammalian alpha-taxonomy from 1975 to 2005<!--and up to 2017-->. First, I discuss the new species and groups discovered in this period. Second, I focus on the methods employed to diagnose and delimit these mammal species and how these have changes over the the past 30 to 40 years. Third, I will attempt to draw conclusions, if possible, about the speciation mechanisms at work in mammal populations based on the evidence use to delimit those mammal species. And lastly, I will frame these discussions in the context of the species concepts (or lack thereof) typically used in mammalogy and mammalian taxonomy.
 
-*Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?!--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for exploration and visualisation [@Wickham2017] ...
+*Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?!--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for exploration and visualisation [@Wickham2017]
 
 ## Mammal discoveries, 1975---2005
 
