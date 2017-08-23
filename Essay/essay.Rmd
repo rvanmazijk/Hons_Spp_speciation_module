@@ -23,6 +23,7 @@ header-includes:
 ---
 
 ```{r msw3-script-setup, include = FALSE}
+rm(list = ls())
 if (!require(pacman)) install.packages("pacman")
 library(pacman)
 p_load(here)
@@ -30,12 +31,14 @@ here()
 ```
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 knitr::opts_knit$set(root.dir = here())
 ```
 
-```{r source-msw3-script, include = FALSE, cache = TRUE}
+<!--Can't cache, something in `magrittr::not()` breaks?-->
+```{r source-msw3-script, include = FALSE, cache = FALSE}
 source("msw3_analyses.R")
+p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 ```
 
 
@@ -62,7 +65,19 @@ source("msw3_analyses.R")
 
 Herein I discuss the progress of mammalian alpha-taxonomy from 1975 to 2005<!--and up to 2017-->. First, I discuss the new species and groups discovered in this period. Second, I focus on the methods employed to diagnose and delimit these mammal species and how these have changes over the the past 30 to 40 years. Third, I will attempt to draw conclusions, if possible, about the speciation mechanisms at work in mammal populations based on the evidence use to delimit those mammal species. And lastly, I will frame these discussions in the context of the species concepts (or lack thereof) typically used in mammalogy and mammalian taxonomy.
 
-*Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?!--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for exploration and visualisation [@Wickham2017]
+*Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?!--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for exploration and visualisation [@Wickham2017].
+
+There is a subset of mammal order that are most taxonomically "active" (Figure \ref{taxa-thru-time}), such that there are only eight orders in which $≥10$ new species were described in the period 1975---2005.
+
+```{r taxa-thru-time, fig.height = 4, fig.width = 4, fig.cap ='\\label{taxa-thru-time} \\footnotesize  (ca. 54 hours range of sampling): \\normalsize \\textbf{A)} \\footnotesize Rain-fall input ($m^{3} h^{-1}$), \\normalsize \\textbf{B)} \\footnotesize stream-flow rate ($m^{3} h^{-1}$) of the Liesbeeck River, and \\normalsize \\textbf{C)} \\footnotesize $\\delta^{18}O$ (\u2030) and \\normalsize \\textbf{D)} \\footnotesize $\\delta^{2}H$ (\u2030) values for both the rain- and stream-water (keyed).'}
+# TODO: add ordinal silhouettes to facets?
+plot_new_taxa(msw, "SPECIES",
+    by = "Order",
+    which_orders = get_the_coolest(msw, "Order"),
+    ylab = "spp.",
+    drop_fill = TRUE,
+    drop_facet = TRUE)
+```
 
 ## Mammal discoveries, 1975---2005
 
@@ -118,6 +133,19 @@ Genomics is up-and-coming! e.g. Murphy et al. 2004
 -->
 
 ## Concluding remarks
+
+
+\noindent \hrulefill
+
+<!--Figures-------------------------------------------------------------------->
+
+e.g.
+    `Blah blah blah (Figures \ref{o_vs_h}B, \ref{o_vs_h}C).`
+    
+e.g.
+`{r timeline, warning = F, fig.height = 7, fig.width = 7, fig.cap ='\\label{timeline} \\footnotesize Timeline of isotopic and hydrological values throughout the winter storm-event during which sampling was carried out (ca. 54 hours range of sampling): \\normalsize \\textbf{A)} \\footnotesize Rain-fall input ($m^{3} h^{-1}$), \\normalsize \\textbf{B)} \\footnotesize stream-flow rate ($m^{3} h^{-1}$) of the Liesbeeck River, and \\normalsize \\textbf{C)} \\footnotesize $\\delta^{18}O$ (\u2030) and \\normalsize \\textbf{D)} \\footnotesize $\\delta^{2}H$ (\u2030) values for both the rain- and stream-water (keyed).'}`
+
+<!--/Figures------------------------------------------------------------------->
 
 
 \noindent \hrulefill
