@@ -37,7 +37,8 @@ knitr::opts_chunk$set(echo = FALSE,
 knitr::opts_knit$set(root.dir = paste(here()))
 ```
 
-```{r source-msw3-script, include = FALSE, cache = FALSE}
+```{r source-msw3-script}
+# FIXME
 source("msw3_analyses.R")
 p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 ```
@@ -115,7 +116,7 @@ Early molecular work used in mammal taxonomy employed karyotype studies [e.g. @B
 
 Discoveries of new mammal species over this 30 year period are dominated by rodents and bats (Figure \ref{taxa-thru-time}). It is thus interesting that, in the Cape, only one new mammal species was described in the the period 1975 to 2005 [@Meester1978]: *`r paste(cape_sl_msw$Genus, cape_sl_msw$Species)`*, from the order `r cape_sl_msw$Order`, discovered around Knysna. This shrew species was first delimited on the basis of its morphology and geographic range, distinct from those of its relatives [@Meester1978].
 
-South African mammal species over this period include *`r paste(cape_sl_msw$Genus, cape_sl_msw$Species)`*, the rodent *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[2]`*, and the golden mole *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`* (Afrosoricidimorpha) [@Bronner2000].
+South African mammal species over this period include *`r paste(cape_sl_msw$Genus, cape_sl_msw$Species)`*, the rodent *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[2]`*, and the golden mole *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`* (Afrosoricidimorpha) [@Bronner2000]. In the case of the golden mole, karyotypic and phenetic methods were employed.
 
 - Africa
     - Primates, Rodents, Soricom.
