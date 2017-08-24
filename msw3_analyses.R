@@ -370,8 +370,7 @@ afr_sl_msw <- msw %>%
            Date >= 1975) %>%
            #Order %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
-# Remove the obviously not African entries
-afr_sl_msw %<>% `[`(-25, NULL)
+summary(afr_sl_msw)
 
 if (do_plots) {
     plot_new_taxa(afr_sl_msw, "SPECIES",
