@@ -326,10 +326,7 @@ cape_sl_msw <- msw %>%
            Order %in% get_the_coolest(msw, "Order")) %>%
     select(Order, Genus, Species, CitationName, Distribution)
 View(cape_sl_msw)
-# Flag the ones *actually* from the Cape
-cape_sl_msw_mini %<>%
-    cbind(flag = rep(FALSE, nrow(cape_sl_msw_mini)))
-cape_sl_msw_mini$flag[c(21, 26:30)] <- TRUE  # FIXME
+
 
 # Africa
 afr_msw <- filter(msw,
