@@ -271,7 +271,9 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module"
+		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module",
+		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module/Essay",
+		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module/Misc_deliverable_papers"
 	],
 	"file_history":
 	[
@@ -560,7 +562,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 235.0,
+	"side_bar_width": 265.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

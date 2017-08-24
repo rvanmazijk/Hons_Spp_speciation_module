@@ -76,17 +76,15 @@ The species concept or criteria a taxonomist follows can affect the number of sp
 
 \small
 
-> \textit{Mammalogists, for the most part, have avoided debate on species concepts, but most investigators follow a particular species definition}
+> \textit{Mammalogists, for the most part, have avoided debate on species concepts, but most investigators follow a particular species definition.}
 
 \normalsize
 
 \noindent @Baker2006 make this somewhat alarming statement about the *modus operandi* of mammal taxonomists. It appears that mammal taxonomy, like many fields of biology, has agreed-upon nomenclatural standards, but has little consensus on which species concepts to use when delineating species. This precludes ready comparison of, say, mice species vs bovid species, as there is no guarantee that "species" represent similarly biologically important units. <!--Perhaps this isn't a bad thing? But I suppose that depends on the taxonomic scale at which SCs fail at facilitating comparison-->
 
-<!--Idiosyncratic/researcher-specific species concept usage...-->
+<!--elaborate: Idiosyncratic/researcher-specific species concept usage...-->
 
-For the most part, mammologists historically<!--when?--> followed (if only loosely) the Biological Speciec Concept (BSC)<!--ref Mayr-->. <!--elaborate--> The Phylogenetic Species Concept (PSC) contrasts with the BSC in focussing on an explicitly evolutionary, lineage based criterion<!--ref--> <!--elaborate on allopatry solution that the PSC gives-->. The PSC thus now dominates in mammalogy, as the most common species concept used or referred to<!--ref-->. The transition from majority usage of the BSC to PSC in mammal taxonomy is entirely not so simple, however. There is little explicit consideration of species concepts by the majority of mammal taxonomists<!--ref-->.
-
-@Baker2006 themseleves put forward the Genetic Species Concept (GSC), wherein a species represents:
+For the most part, mammologists historically<!--when?--> followed (if only loosely) the Biological Speciec Concept (BSC)<!--ref Mayr-->. This is intuitive as mammals are sexually reproducing eukaryotes [@Mayr; @Baker2006]<!--elaborate-->. The Phylogenetic Species Concept (PSC) contrasts with the BSC in focussing on an explicitly evolutionary, lineage based criterion<!--ref--> <!--elaborate on allopatry solution that the PSC gives-->. The PSC thus now dominates in mammalogy, as the most common species concept used or referred to<!--ref-->. The PSC solves the problem of the BSC wherein entities widely regarded as ideally being two species fail to be differentiated reproductively. @Baker2006 themseleves put forward the Genetic Species Concept (GSC), wherein a species represents:
 
 \small
 
@@ -94,12 +92,22 @@ For the most part, mammologists historically<!--when?--> followed (if only loose
 
 \normalsize
 
-\noindent This does not necessarily imply reproductive isolation<!--elaborate-->. E.g. Thomomys pocket gophers; But there is debate... “[…] 100% diagnosable: they have fixed heritable differences between them […]”; “[…] offer a repeatable, falsifiable definition of species […]”; Groves 2012. American Journal of Primatology. 74(8):687–691.
+\noindent This does not necessarily imply reproductive isolation either, as can be seen in the case of *Thomomys* pocket gophers [@Baker2006]<!--elaborate-->. The transition from majority usage of the BSC to PSC in mammal taxonomy is not so simple, however. There is little explicit consideration of species concepts by the majority of mammal taxonomists<!--ref-->. And, there is debate. @Groves2012 in particular advocate more strongly for the PSC, even in place of the GSC, in that species defined by the PSC are:
+
+\small
+
+> \textit{[...] 100\% diagnosable: they have fixed heritable differences between them [...] [and the PSC] offer[s] a repeatable, falsifiable definition of species [...]}
+
+\normalsize
+
+\noindent This is evident in the widespread application of the PSC in mammal taxonomy. But nonetheless, the lack of explicit concern for species criteria is troubling<!--elaborate-->. Do mammal taxonomists employ similar methodogies when delimiting species? I discuss this below, despite the nuanced inconsistencies that differing species concepts among mammalogists may lead to.
 
 
 ## Lines of evidence
 
-Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But still influential! e.g. in allopatry); Phenetics still common, or 1st port-of-call e.g. Lew et al. 2006. J. Mammal. 87(2):224–237; 2-4) Karyotype studies, Allozymes, DNA sequencing; costly in the early days, but soon very doable!! very objective!; can highlight cryptic species; taxonomic infaltion?; see cases below
+Morphology was the dominant method in mammal species delimitation prior to 1985 [@Baker2006]. Indeed, morpholgical differences between taxa are still influential in their taxonomy. Furthermore, allopatric populations of mammal that are morphologically distinct (whatever that may entail) are regularly treated as separate species. This concurs with the usage of the PSC above, where non-reproductively isolated taxa (e.g. grizzly and polar bears; lions and tigers) are treated as separate species<!--elaborate-->. Phenetics still common practice in mammal taxonomy, wherein morphological divergence between populations is numerically described. Species are then diagnosed as clusters in this quantitative trait-space<!--more!-->. Phenetics and morphology are often also the starting points of alpha-taxonomic research [e.g. @Lew2006], as it is more amenable to efficient, cheap study than molecular systematics.
+
+Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2006]---to delineate species on the basis of chromosomal traits (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't appply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered. This does, however, lead to taxonomic infaltion.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity
 
 
 ## Mammal discoveries, 1975---2005
@@ -113,16 +121,8 @@ Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But 
     - Primates, Rodents, Soricom.
 - Global?
     - <more>
-
 - e.g. cytochrome-b (mtDNA)
     - Carvalho et al. 2009. Phylogeny of Thylamys (Didelphimorphia, Didelphidae) species, with special reference to Thylamys karimii
-
-\small
-
-> \textit{The increase in the number of named species [means] that we have increased our perception and understanding of the diversity of the primates.}---Rylands et al. 2012. International Zoo Yearbook. 46(1):11–24
-
-\normalsize
-
 - cytochrome-b in rodents
     - Re: GSC sensu Baker & Bradley 2006 (J. of Mammal. 87(4):643–662), Bradley & Baker 2001 (J. of Mammal. 82(4):960–973)
 - multi-locus work in Afro-tropical shrews
@@ -144,9 +144,6 @@ Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But 
 - Genomics is up-and-coming! e.g. Murphy et al. 2004
 
 
-<!--\noindent \hrulefill-->
-
-
 ![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.](ppt_fig.png)
 
 <!--OR:
@@ -158,7 +155,7 @@ Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But 
 -->
 
 
-<!--\noindent \hrulefill-->
+\noindent \hrulefill
 
 # \small References
 \footnotesize \hangparas{15pt}{1}
