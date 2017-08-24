@@ -141,7 +141,7 @@ if (do_plots) {
     # And some more
     plot_new_taxa(msw, "SPECIES",
         by = "Family",
-        which_by = get_the_coolest(msw, "Family", cutoff = 7),  # aot cutoff of 10
+        which_by = get_the_coolest(msw, "Family", cutoff = 7),  # aot cutoff=10
         drop_fill = TRUE,
         drop_facet = TRUE)
     
@@ -259,8 +259,6 @@ if (do_plots) {
 }
 
 
-
-
 # Get the most common journals -------------------------------------------------
 
 if (do_plots) {
@@ -320,12 +318,18 @@ cape_msw %>%
     select(Order, Genus, Species, CitationName) %>%
     mutate(binom = paste(Genus, Species))
 
-# Cape all_column search
-cape_sl_msw <- search_all_columns(msw, "[Cc]ape")
-cape_sl_msw %>% select(Distribution)
-cape_sl_msw %>%
-    select(Order, Genus, Species, CitationName) %>%
-    mutate(binom = paste(Genus, Species))
+# Cape "all_column" search
+cape_sl_msw <- msw %>%
+    search_all_columns("[Ww]estern [Cc]ape") %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order")) %>%
+    select(Order, Genus, Species, CitationName, Distribution)
+View(cape_sl_msw)
+# Flag the ones *actually* from the Cape
+cape_sl_msw_mini %<>%
+    cbind(flag = rep(FALSE, nrow(cape_sl_msw_mini)))
+cape_sl_msw_mini$flag[c(21, 26:30)] <- TRUE  # FIXME
 
 # Africa
 afr_msw <- filter(msw,

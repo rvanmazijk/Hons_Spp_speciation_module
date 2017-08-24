@@ -69,12 +69,12 @@ p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 
 There is a subset of mammal order that are most taxonomically "active" (Figure \ref{taxa-thru-time}), such that there are only eight orders in which $\geq 10$ new species were described in the period 1975---2005. This is worth bearing in mind when discussing mammalian taxonomy; there is a taxonomic bias to, either, the rate of discovery in certain taxa, or the species richness of certain taxa. Either way, species concepts have bearing on these numbers, discussed below.
 
-![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.](ppt_fig.png){ width=65% }
+![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion, such 533 species' discoveries are illustrated here.](ppt_fig.png){ width=65% }
 
 
 ## Mammalogical species concepts
 
-The species concept or criteria a taxonomist follows can affect the number of species delimited. Supposing there is reality to species, and that two lineages being different species is grounded in reality, species concepts enable us to estimate when this occurs. Following the reasoning of @DeQueiroz2011, different species concepts each deal with different lines of empirical evidence. These each describe different aspects of the speciation process, such that in each the criteria for delimiting two different species is based on some property of each lineage that would differ between them if they were separate species [@DeQueiroz2011]. Consequently, different species concepts all encapsulate *some* aspect of dissimilarity between two lineages as a consequence of speciation. @DeQueiroz2011 argues that should any one criterion be met, it is parsimonious to assume speciation has begun, and that the bifurcation of the lineages be appropriately regarded with a species delineation. This aside, consistency in species concepts in taxonomic research is still desirable (if perhaps unattainable<!--ref from module readings-->). The case with mammal taxonomists is summarised well:
+The species concept or criteria a taxonomist follows can affect the number of species delimited. Supposing there is reality to species, and that two lineages being different species is grounded in reality, species concepts enable us to estimate when this occurs. Following the reasoning of @DeQueiroz2011, different species concepts each deal with different lines of empirical evidence. These each describe different aspects of the speciation process, such that in each the criteria for delimiting two different species is based on some property of each lineage that would differ between them if they were separate species [@DeQueiroz2011]. Consequently, different species concepts each encapsulate *some* aspect of dissimilarity between two lineages as a consequence of speciation. @DeQueiroz2011 argues that should any one criterion be met, it is parsimonious to assume speciation has begun, and that the bifurcation of the lineages be appropriately regarded with a species delineation. This aside, consistency in species concepts in taxonomic research is still desirable (if perhaps unattainable<!--ref from module readings-->). The case with mammal taxonomists is summarised well:
 
 \small
 
@@ -109,10 +109,21 @@ For the most part, mammologists historically<!--when?--> followed (if only loose
 
 Morphology was the dominant method in mammal species delimitation prior to 1985 [@Baker2006]. Indeed, morpholgical differences between taxa are still influential in their taxonomy. Furthermore, allopatric populations of mammal that are morphologically distinct (whatever that may entail) are regularly treated as separate species. This concurs with the usage of the PSC above, where non-reproductively isolated taxa (e.g. grizzly and polar bears; lions and tigers) are treated as separate species<!--elaborate-->. Phenetics still common practice in mammal taxonomy, wherein morphological divergence between populations is numerically described. Species are then diagnosed as clusters in this quantitative trait-space<!--more!-->. Phenetics and morphology are often also the starting points of alpha-taxonomic research [e.g. @Lew2006], as it is more amenable to efficient, cheap study than molecular systematics.
 
-Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2006]---to delineate species on the basis of chromosomal traits (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't appply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered. This does, however, lead to taxonomic infaltion.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity
+Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2006]---to delineate species on the basis of chromosomal traits (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't apply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered [@Zimmermann2014]. This does, however, contribute to taxonomic inflation.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity<!--elaborate-->. Furthermore, molecular systematic methods may reveal morphologically distinct populations to in fact be polymorphs of a single species [@Zimmermann2014].
 
 
 ## Mammal discoveries, 1975---2005
+
+Discoveries of new mammal species over the this 30 year period are dominated by rodents and bats (Figure \ref{taxa-thru-time}).
+
+
+In the Cape, the following species were discovered in this period (Table \ref{foo}):
+
+<!--
+```{r cape_sl_msw, results = "asis", fig.cap = "\\label{foo}"}
+knitr::kable(as.data.frame(msw[1:5, 1:5]), caption = "Foo")
+```
+-->
 
 - Cape
     - Myosorex longicaudatus
