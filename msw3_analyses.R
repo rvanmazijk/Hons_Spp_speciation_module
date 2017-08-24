@@ -338,8 +338,7 @@ paste(SA_sl_msw$Genus, SA_sl_msw$Species)
 # But I can get them so I can google them!
 msw %>%
     filter(ID %in% SA_sl_msw$ID) %>%
-    select(Author:CitationType) %T>%
-    View()
+    select(Author:CitationType)
 msw %>%
     filter(ID %in% SA_sl_msw$ID) %$%
     paste(Author, Date, CitationName)
@@ -365,7 +364,15 @@ transv_msw %>%
     mutate(binom = paste(Genus, Species))
 
 # Search "Afr" in all_columns
-afr_sl_msw <- search_all_columns(msw, "[Aa]fr")
+afr_sl_msw <- msw %>%
+    search_all_columns("[Aa]fr") %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975) %>%
+           #Order %in% get_the_coolest(msw, "Order")) %>%
+    select(ID, Order, Genus, Species, CitationName, Distribution)
+# Remove the obviously not African entries
+afr_sl_msw %<>% `[`(-25, NULL)
+
 if (do_plots) {
     plot_new_taxa(afr_sl_msw, "SPECIES",
         from = 1975,
