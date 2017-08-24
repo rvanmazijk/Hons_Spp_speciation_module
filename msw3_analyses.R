@@ -317,7 +317,6 @@ cape_msw %>% count(CitationName)
 cape_msw %>%
     select(Order, Genus, Species, CitationName) %>%
     mutate(binom = paste(Genus, Species))
-
 # Cape "all_column" search
 cape_sl_msw <- msw %>%
     search_all_columns("[Ww]estern [Cc]ape") %>%
@@ -335,7 +334,11 @@ SA_sl_msw <- msw %>%
            #Order %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
 paste(SA_sl_msw$Genus, SA_sl_msw$Species)
-SA_sl_msw
+# Paste the citations to render in the `.Rmd`? Nope
+# But I can get them so I can google them!
+msw %>%
+    filter(ID %in% SA_sl_msw$ID) %$%
+    paste(Author, Date, CitationName)
 
 # Africa
 afr_msw <- filter(msw,
