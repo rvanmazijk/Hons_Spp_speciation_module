@@ -44,7 +44,7 @@ p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 ```
 
 
-\begin{wrapfigure}{r}{100pt}  % this figure will be at the left
+\begin{wrapfigure}{r}{100pt}  % this figure will be at the right
     \includegraphics[width=1.5cm, height=1.5cm]{uct_logo.png} \hfill
     \includegraphics[width=1.5cm, height=1.5cm]{biosci_logo_crop.png}
 \end{wrapfigure}
@@ -144,13 +144,21 @@ Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But 
 - Genomics is up-and-coming! e.g. Murphy et al. 2004
 
 
-\noindent \hrulefill
+<!--\noindent \hrulefill-->
 
 
-![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion](ppt_fig.png)
+![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.](ppt_fig.png)
+
+<!--OR:
+\begin{figure}[b]  % place at bottom of page
+    \centering \includegraphics[width=15cm]{ppt_fig.png}
+    \label{taxa-thru-time}
+    \caption{\footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) \ref{MSW3}. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.}
+\end{figure}
+-->
 
 
-\noindent \hrulefill
+<!--\noindent \hrulefill-->
 
 # \small References
 \footnotesize \hangparas{15pt}{1}
