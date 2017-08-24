@@ -1,0 +1,569 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"morp",
+				"morphology"
+			],
+			[
+				"select",
+				"select_all"
+			],
+			[
+				"rough_",
+				"rough_agg_x"
+			],
+			[
+				"shuffle",
+				"shuffle_raster"
+			],
+			[
+				"rm",
+				"rmarkdown\tInstalled Package"
+			],
+			[
+				"save",
+				"save\t{base}"
+			],
+			[
+				"ab",
+				"abs\t{base}"
+			],
+			[
+				"form",
+				"format\t{base}"
+			],
+			[
+				"list.",
+				"list.files"
+			],
+			[
+				"list_",
+				"list_of_rasters"
+			],
+			[
+				"df_",
+				"df_of_files"
+			],
+			[
+				"proj_",
+				"proj_crop_mask_mean_slave"
+			],
+			[
+				"file_",
+				"file_name"
+			],
+			[
+				"is.n",
+				"is.null\t{base}"
+			],
+			[
+				"modf",
+				"modfile_query_slave"
+			],
+			[
+				"func",
+				"function\t{base}"
+			],
+			[
+				"class",
+				"Class"
+			],
+			[
+				"e",
+				"edit\tRemove column from dataframe"
+			],
+			[
+				"years",
+				"year_rasters_exist"
+			],
+			[
+				"Ye",
+				"Year_2000"
+			],
+			[
+				"unl",
+				"unlist\t{base}"
+			],
+			[
+				"foo",
+				"foo_file_query"
+			],
+			[
+				"mon",
+				"month_file_index"
+			],
+			[
+				"install",
+				"install.packages\t{utils}"
+			],
+			[
+				"def",
+				"defs\tMethod"
+			],
+			[
+				"plot",
+				"plot.default\t{graphics}"
+			],
+			[
+				"or",
+				"original"
+			],
+			[
+				"ch",
+				"chapter"
+			],
+			[
+				"i",
+				"in"
+			],
+			[
+				"col",
+				"collection-number"
+			],
+			[
+				"d",
+				"det\tDetach"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 157.0,
+		"last_filter": "JSON",
+		"selected_items":
+		[
+			[
+				"JSON",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"JSO",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"todo",
+				"TodoReview: Open Files"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Function"
+			],
+			[
+				"Repl p",
+				"SublimeREPL: Python"
+			],
+			[
+				"Repl",
+				"SublimeREPL: R"
+			],
+			[
+				"Py",
+				"SublimeREPL: Python"
+			],
+			[
+				"Boxy",
+				"Boxy Theme: Activation"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Send",
+				"SendTextPlus: Choose Program"
+			],
+			[
+				"Set",
+				"Set Syntax: R Extended"
+			],
+			[
+				"Pac",
+				"Install Package Control"
+			]
+		],
+		"width": 431.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"python",
+			"quit",
+			"quit()",
+			"$r",
+			"r",
+			"python",
+			"if x > 3",
+			"x == 1",
+			"x == 2",
+			"print(x)",
+			"x",
+			"x = 1",
+			"Python",
+			"create table tbl1(one varchar(10), two smallint)",
+			"create table tbl1(one varchar(10), two smallint);"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module"
+	],
+	"file_history":
+	[
+		"/Users/ruanvanmazijk/Downloads/poly-veg-chi-for-Michelle_weird-indentation_2017-08-23.R",
+		"/Users/ruanvanmazijk/Dropbox/Notes_from_VinoVarsity3.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/iv_Theory_essay/Hons-theory-essay/IEEE.csl",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/iv_Theory_essay/Hons-theory-essay/nature.csl",
+		"/Users/ruanvanmazijk/Desktop/mmmm.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/iv_Theory_essay/Hons-theory-essay/.git/description",
+		"/Users/ruanvanmazijk/Desktop/saved_tabs_2017-08-14.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/vi_Species_and_speciation_MM/Hons_Spp_speciation_module/lit_search.json",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/iv_Theory_essay/glogers_rule_2017-05-22.txt",
+		"/Users/ruanvanmazijk/Desktop/sdifj",
+		"/Users/ruanvanmazijk/Desktop/sfsdfsdfs",
+		"/Users/ruanvanmazijk/Desktop/MEDS",
+		"/Volumes/RUAN'S HDD/Fork_from_cable_problem_2017-08-04/Hons_Spp_speciation_module/lit_search.json",
+		"/Users/ruanvanmazijk/Dropbox/Kautt&al Notes (Michelle).txt",
+		"/Volumes/RUAN'S HDD/Fork_from_cable_problem_2017-08-04/Hons_Spp_speciation_module/Image_credits.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/marks_foo.json",
+		"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/abind/NAMESPACE",
+		"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/abind/R/abind.rdx",
+		"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/abind/R/abind.rdb",
+		"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/abind/R/abind",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/v_Phylogenetic_ecology_TV/notes.txt",
+		"/Users/ruanvanmazijk/Downloads/pirie2016_erica2.phy.txt",
+		"/Users/ruanvanmazijk/Downloads/foresttree_pruned_TV.tre.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/marks.pages",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/i_General_modules/ii_Imaging/imaging_proj_notes_2017-04-10.txt",
+		"/Users/ruanvanmazijk/Desktop/Untitled.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Data/Mikes_help_w_speciesdata/VeganII-iNext.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Data/Mikes_help_w_speciesdata/ruans_version_ofmikes_script.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Data/SWAFR_POLYGON_WKT.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_Veg_wars_Module/i_my_funs.R",
+		"/Users/ruanvanmazijk/Desktop/make_flora_etal4.R",
+		"/Users/ruanvanmazijk/Desktop/make_flora_etal3.R",
+		"/Users/ruanvanmazijk/Desktop/make_flora_etal2.R",
+		"/Users/ruanvanmazijk/Desktop/make_flora_etal6.R",
+		"/Users/ruanvanmazijk/Desktop/make_flora_etal5.R",
+		"/Users/ruanvanmazijk/Desktop/make_flora_etal.R",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/NRF_app_2018/Extras_to_add_2017-07-07.txt",
+		"/Users/ruanvanmazijk/Desktop/draw.R",
+		"/Users/ruanvanmazijk/Desktop/Mapping_May2017_SETH.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_Veg_wars_Module/2017-07-14_10h17",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/iv_Vegetable_wars_MC/exam_question_idea_forMike.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/iv_Vegetable_wars_MC/writeup.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_Veg_wars_Module/Results/01_README.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_Veg_wars_Module/Results/Results_for_MikeTaraJess/01_README.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_Veg_wars_Module/Results/circles_sites_results_final.RData",
+		"/Users/ruanvanmazijk/Documents/R/Hons_Veg_wars_Module/02_vegwars_analysis_2017-07-12.R",
+		"/Users/ruanvanmazijk/Desktop/foofoo.R",
+		"/Users/ruanvanmazijk/Desktop/foo2.R",
+		"/Users/ruanvanmazijk/Desktop/Veg_wars_polys_Ruan_partial.kmz",
+		"/Volumes/QGIS 2.18/GDAL Extras/GDAL python samples/README",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/iv_Vegetable wars_MC/Veg_wars_outline_2017.txt",
+		"/Users/ruanvanmazijk/Desktop/bookmarks_2017-07-06.json",
+		"/Users/ruanvanmazijk/Desktop/bookmarks_2017-07-06_edit.json",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/NRF_app_2018/Msc_NRF_app_text_draft2.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/NRF_app_2018/Msc_NRF_app_text_draft2_forNina.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/NRF_app_2018/Msc_NRF_app_text.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/NRF_app_2018/Msc_NRF_app_text_draft2.rmdown",
+		"/Users/ruanvanmazijk/Documents/bookmark_archiveDEPREC/lates_source_archive_2016-06-07/chrome_bookmarks (1).json",
+		"/Users/ruanvanmazijk/Documents/UCT/marks.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/marks_relaxed.txt",
+		"/Volumes/ftp.soilgrids.org/data/AF/GYGA/README",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/Msc_NRF_app_text.txt",
+		"/Users/ruanvanmazijk/Desktop/new_bookmarks.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/Msc_app_text.txt",
+		"/Users/ruanvanmazijk/Documents/bookmark_archive/lates_source_archive_2016-06-07/chrome_bookmarks (1).json",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/JSON Reindent/JSONReindent.sublime-settings",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/User/JSONReindent.sublime-settings",
+		"/Users/ruanvanmazijk/Documents/R/R_pkgs/car/R/car",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/ii_my_objs.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/i_my_funs.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/v_prelim_anal_fn_old_2017-06-28.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/i_my_funs_old_2017-06-28.R",
+		"/Users/ruanvanmazijk/Desktop/RmdRnb_for_Eleanor.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/13_rand_raster_null_2017-06-22.R",
+		"/Users/ruanvanmazijk/Documents/UCT/Masters_applications/2018_2_2017-06-18.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/fooooooooooo.R",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/TodoReview/Default.sublime-mousemap",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/fig_printing/fig_printing_2017-05-25.Rmd",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/pca_question_for_tony/pca_question_for_tony.Rmd",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/TodoReview",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/10_preliminary_anal_SRTM-2017-05-23.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/02_saving_regional_CHIRPS_stacks_to_disc_2017-04-18.R",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/User/TodoReview.sublime-settings",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/TodoReview/TodoReview.sublime-settings",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/TodoReview/Default.sublime-keymap",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/10_working_w_ASTER-2017-05-23.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/08_dl_and_convert_MODIS-2017-05-23.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/13_prelim_anal_fn.txt",
+		"/Users/ruanvanmazijk/Desktop/foo_raster.R",
+		"/Users/ruanvanmazijk/Desktop/foo.R",
+		"/Users/ruanvanmazijk/Documents/R/Hons_thesis/Scripts/bash_gdal_algs_documentation.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/MSc/2018_2_2017-06-18.txt",
+		"/Users/ruanvanmazijk/Documents/UCT/MSc/2018_2.txt",
+		"/Users/ruanvanmazijk/Desktop/untitled.py",
+		"/Users/ruanvanmazijk/Desktop/untitled.txt",
+		"/Users/ruanvanmazijk/Documents/R/Hons_Isotopics_Module/deliverable_anal_2017-06-09.R",
+		"/Users/ruanvanmazijk/Desktop/dfsdfsdfsdfsd.R",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/User/SendTextPlus.sublime-settings",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/User/R-Box.sublime-settings",
+		"/Users/ruanvanmazijk/Library/Application Support/Sublime Text 3/Packages/R-Box/R-Box.sublime-settings",
+		"/Users/ruanvanmazijk/Desktop/sdfsdfsdfd2.svg",
+		"/Users/ruanvanmazijk/Documents/Bibliographies/Bryo_taxo_deliverable22.bib",
+		"/Users/ruanvanmazijk/Downloads/chrome_bookmarks.json",
+		"/Applications/bib_to_txt",
+		"/Users/ruanvanmazijk/Documents/Bibliographies/Bryo_taxo_deliverable2.bib",
+		"/usr/local/Cellar/bibtexconv/1.1.7/bin/bibtexconv-odt",
+		"/Applications/execute_folder.app/Contents/MacOS/execute",
+		"/Applications/bib_to_txt.app/Contents/MacOS/execute",
+		"/Applications/bib_to_txt.app/Contents/MacOS/bibtexconv_rvm",
+		"/Users/ruanvanmazijk/Desktop/bib_to_txt/Contents/MacOS/bibtexconv_rvm",
+		"/usr/local/Cellar/bibtexconv/1.1.7/bin/ietf2bibtex",
+		"/usr/local/Cellar/bibtexconv/1.1.7/bin/bibtexconv",
+		"/Users/ruanvanmazijk/Documents/Bibliographies/Bryo_cosmop_phylogeog2.bib",
+		"/Users/ruanvanmazijk/Documents/Bibliographies/Bryo cosmop phylogeog.bib",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/ii. Bryology (TH)/harvard-university-of-cape-town-rvm_2017-04-20.csl",
+		"/Applications/new_txt.app/Contents/MacOS/new_txt",
+		"/Applications/new_txt.app/Contents/MacOS/new_txt2.sh",
+		"/Applications/new_txt_app_junk/untitled.sh",
+		"/Applications/new_txt_app_junk/dynamic_name",
+		"/Applications/new_txt_app_junk/new_txt_backend.sh",
+		"/Applications/new_txt_app_junk/new_txt2.sh",
+		"/Applications/new_txt_app_junk/dynamic_name.sh",
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/i. Palaeobiology (ACT)/whale_evol_2017-05-22.txt",
+		"/Users/ruanvanmazijk/Downloads/download (1).sh",
+		"/Users/ruanvanmazijk/Documents/R/R_pkgs/tidyverse/NEWS.md",
+		"/Users/ruanvanmazijk/Documents/UCT/Misc./Rlogo.svg"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 132.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"whether",
+			"Muasya",
+			"Li",
+			"Lit",
+			"(",
+			"spatial",
+			"pts",
+			"Points",
+			"points",
+			"raster",
+			"word_count",
+			"in",
+			"editor",
+			"ed",
+			"in",
+			"year",
+			"(",
+			"collection",
+			"year",
+			"no",
+			"nos.",
+			"chapter",
+			"book",
+			"create table tbl1(one varchar(10), two smallint);\n\ninsert into tbl1 values('hello!',10);\ninsert into tbl1 values('goodbye', 20);\n.save DB.csv",
+			"need.log"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 76.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/R/R.sublime-build",
+	"project": "Hons_Spp_speciation_module.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Downloads/script.R"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 67.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"foo"
+			]
+		],
+		"width": 374.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

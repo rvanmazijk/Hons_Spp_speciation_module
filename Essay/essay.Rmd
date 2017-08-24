@@ -34,7 +34,7 @@ here()
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
                       message = FALSE)
-knitr::opts_knit$set(root.dir = here())
+knitr::opts_knit$set(root.dir = paste(here()))
 ```
 
 ```{r source-msw3-script, include = FALSE, cache = FALSE}
@@ -147,16 +147,10 @@ Lines of evidence in mammal species delimitation; 1) Morphology (pre-1985) (But 
 \noindent \hrulefill
 
 
-```{r taxa-thru-time, fig.height = 4, fig.width = 4, fig.cap ='\\label{taxa-thru-time} \\footnotesize Bar-plots of the number of new species (\\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.'}
-# TODO: add order-animal silhouettes to facets?
-plot_new_taxa(msw, "SPECIES",
-    by = "Order",
-    which_orders = get_the_coolest(msw, "Order"),
-    ylab = "spp.",
-    drop_fill = TRUE,
-    drop_facet = TRUE)
-```
+![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion](ppt_fig.png)
 
+
+\noindent \hrulefill
 
 # \small References
 \footnotesize \hangparas{15pt}{1}
