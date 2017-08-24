@@ -71,6 +71,8 @@ There is a subset of mammal order that are most taxonomically "active" (Figure \
 
 ![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion, such 533 species' discoveries are illustrated here. For reference, Dasyuromorphs are commonly referred to as Tasmanian devils and numbats, Didelphimorphs as opossums, Diprotodonts as koalas and wombats, and Soricomorphs as moles and shrews](ppt_fig.png){ width=65% }
 
+![\label{taxa-thru-africa} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the three orders of mammal over the period 1975---2005 that had *any* new species found in that period. Not shown is Afrosoricomorpha, which had one new species: *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`*, a golden mole [@Bronner2000] (see text). Data are from MSW3 (see text) [@MSW3].](ppt_fig_africa.png){ width=65% }
+
 
 ## Mammalogical species concepts
 
@@ -116,7 +118,8 @@ Early molecular work used in mammal taxonomy employed karyotype studies [e.g. @B
 
 Discoveries of new mammal species over this 30 year period are dominated by rodents and bats (Figure \ref{taxa-thru-time}). It is thus interesting that, in the Cape, only one new mammal species was described in the the period 1975 to 2005 [@Meester1978]: *`r paste(cape_sl_msw$Genus, cape_sl_msw$Species)`*, from the order `r cape_sl_msw$Order`, discovered around Knysna. This shrew species was first delimited on the basis of its morphology and geographic range, distinct from those of its relatives [@Meester1978].
 
-South African mammal species over this period include *`r paste(cape_sl_msw$Genus, cape_sl_msw$Species)`*, the rodent *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[2]`*, and the golden mole *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`* (Afrosoricidimorpha) [@Bronner2000]. In the case of the golden mole, karyotypic and phenetic methods were employed.
+South African mammal species over this period include *`r paste(cape_sl_msw$Genus, cape_sl_msw$Species)`*, the rodent *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[2]`*, and the golden mole *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`* (Afrosoricidimorpha) [@Bronner2000]. In the case of the golden mole, karyotypic and phenetic methods were employed, as mentioned above. African mammal fauna discoveries are more diverse: 23 new species in the period 1975---2005 (Figure \ref{taxa-thru-africa}).
+
 
 - Africa
     - Primates, Rodents, Soricom.
