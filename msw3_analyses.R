@@ -326,13 +326,9 @@ cape_sl_msw <- msw %>%
            Order %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
 cape_sl_msw
-# Get full citation for this ONE species (it really is one species...)
-M_longicaudatus_citation <- msw %>%
-    filter(ID == cape_sl_msw$ID) %>%
-    transmute(full_citation = as.character(glue("{Author}. {Date}. {CitationName} {CitationVolume}({CitationIssue}): CitationPages (CitationType)"))) %>%
-    `[[`(1)
-    
-    
+
+# South Africa
+# TODO
 
 # Africa
 afr_msw <- filter(msw,
