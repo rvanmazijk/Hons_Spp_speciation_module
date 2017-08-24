@@ -337,6 +337,10 @@ paste(SA_sl_msw$Genus, SA_sl_msw$Species)
 # Paste the citations to render in the `.Rmd`? Nope
 # But I can get them so I can google them!
 msw %>%
+    filter(ID %in% SA_sl_msw$ID) %>%
+    select(Author:CitationType) %T>%
+    View()
+msw %>%
     filter(ID %in% SA_sl_msw$ID) %$%
     paste(Author, Date, CitationName)
 
