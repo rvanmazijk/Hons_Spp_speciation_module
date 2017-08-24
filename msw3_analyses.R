@@ -328,7 +328,14 @@ cape_sl_msw <- msw %>%
 paste(cape_sl_msw$Genus, cape_sl_msw$Species)
 
 # South Africa
-# TODO
+SA_sl_msw <- msw %>%
+    search_all_columns("[Ss]outh [Aa]frica") %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975) %>%
+           #Order %in% get_the_coolest(msw, "Order")) %>%
+    select(ID, Order, Genus, Species, CitationName, Distribution)
+paste(SA_sl_msw$Genus, SA_sl_msw$Species)
+SA_sl_msw
 
 # Africa
 afr_msw <- filter(msw,
