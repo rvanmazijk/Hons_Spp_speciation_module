@@ -146,14 +146,6 @@ Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2
 
 ![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.](ppt_fig.png)
 
-<!--OR:
-\begin{figure}[b]  % place at bottom of page
-    \centering \includegraphics[width=15cm]{ppt_fig.png}
-    \label{taxa-thru-time}
-    \caption{\footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) \ref{MSW3}. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.}
-\end{figure}
--->
-
 
 \noindent \hrulefill
 
