@@ -325,7 +325,7 @@ cape_sl_msw <- msw %>%
            Date >= 1975,
            Order %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
-cape_sl_msw
+paste(cape_sl_msw$Genus, cape_sl_msw$Species)
 
 # South Africa
 # TODO
