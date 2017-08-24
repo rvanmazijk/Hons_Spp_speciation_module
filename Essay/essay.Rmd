@@ -38,6 +38,7 @@ knitr::opts_knit$set(root.dir = paste(here()))
 ```
 
 ```{r source-msw3-script}
+# FIXME
 source("msw3_analyses.R")
 p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 ```
