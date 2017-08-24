@@ -109,21 +109,17 @@ For the most part, mammologists historically<!--when?--> followed (if only loose
 
 Morphology was the dominant method in mammal species delimitation prior to 1985 [@Baker2006]. Indeed, morpholgical differences between taxa are still influential in their taxonomy. Furthermore, allopatric populations of mammal that are morphologically distinct (whatever that may entail) are regularly treated as separate species. This concurs with the usage of the PSC above, where non-reproductively isolated taxa (e.g. grizzly and polar bears; lions and tigers) are treated as separate species<!--elaborate-->. Phenetics still common practice in mammal taxonomy, wherein morphological divergence between populations is numerically described. Species are then diagnosed as clusters in this quantitative trait-space<!--more!-->. Phenetics and morphology are often also the starting points of alpha-taxonomic research [e.g. @Lew2006], as it is more amenable to efficient, cheap study than molecular systematics.
 
-Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2006]---to delineate species on the basis of chromosomal traits (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't apply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered [@Zimmermann2014]. This does, however, contribute to taxonomic inflation.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity<!--elaborate-->. Furthermore, molecular systematic methods may reveal morphologically distinct populations to in fact be polymorphs of a single species [@Zimmermann2014].
+Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2006]---to delineate species on the basis of chromosomal traits (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't apply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered [@Zimmermann2014]. This does, however, contribute to taxonomic inflation.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity<!--elaborate-->. Furthermore, molecular systematic methods may reveal morphologically distinct populations to in fact be polymorphs of a single species [@Zimmermann2014]. In fact, 
 
 
 ## Mammal discoveries, 1975---2005
 
 Discoveries of new mammal species over the this 30 year period are dominated by rodents and bats (Figure \ref{taxa-thru-time}).
 
+...
 
-In the Cape, the following species were discovered in this period (Table \ref{foo}):
+In the Cape, only one new mammal species was described in the the period 1975 to 2005 [@Meester1978]
 
-<!--
-```{r cape_sl_msw, results = "asis", fig.cap = "\\label{foo}"}
-knitr::kable(as.data.frame(msw[1:5, 1:5]), caption = "Foo")
-```
--->
 
 - Cape
     - Myosorex longicaudatus
