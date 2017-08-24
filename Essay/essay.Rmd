@@ -69,6 +69,8 @@ p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 
 There is a subset of mammal order that are most taxonomically "active" (Figure \ref{taxa-thru-time}), such that there are only eight orders in which $\geq 10$ new species were described in the period 1975---2005. This is worth bearing in mind when discussing mammalian taxonomy; there is a taxonomic bias to, either, the rate of discovery in certain taxa, or the species richness of certain taxa. Either way, species concepts have bearing on these numbers, discussed below.
 
+![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.](ppt_fig.png){ width=65% }
+
 
 ## Mammalogical species concepts
 
@@ -132,7 +134,7 @@ Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2
 
 ## Modes of mammalian speciation
 
-...
+
 
 ## Concluding remarks
 
@@ -142,9 +144,6 @@ Early molecular work used in mammal taxonomy employed karyotype studies [@Baker2
 - Genetic sequencing & PSC (or at least ESC)
 - Good taxonomic inflation!
 - Genomics is up-and-coming! e.g. Murphy et al. 2004
-
-
-![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion.](ppt_fig.png)
 
 
 \noindent \hrulefill
