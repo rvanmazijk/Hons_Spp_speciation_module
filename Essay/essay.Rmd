@@ -25,10 +25,10 @@ header-includes:
 # TODO -------------------------------------------------------------------------
 # 2017-08-25 07:30
 
-# √ fix in text species name r execs
-# - branch and pull for updated .bib
-# √ fill in (or remove) "elaborate"s
-# √ proof read
+# [x] fix in text species name r execs
+# [x] branch and pull for updated .bib
+# [x] fill in (or remove) "elaborate"s
+# [x] proof read
 ```
 
 ```{r msw3-script-setup, include = FALSE}
