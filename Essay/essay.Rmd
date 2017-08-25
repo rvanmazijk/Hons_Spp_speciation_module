@@ -105,6 +105,14 @@ Morphology was the dominant method in mammal species delimitation prior to 1985 
 
 Early molecular work used in mammal taxonomy employed karyotype studies [e.g. @Bronner2000]---to delineate species on the basis of chromosomal traits [@Baker2006] (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't apply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered [@Zimmermann2014]. This does, however, contribute to taxonomic inflation.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity<!--elaborate-->. Furthermore, molecular systematic methods may reveal morphologically distinct populations to in fact be polymorphs of a single species [@Zimmermann2014]. In fact, @Zimmermann2014 applied a multi-evidence approach to delimiting cryptic mouse lemur species (*Microcebus spp.*) in Madagascar. This integrative approach, using the confluence of ecological, morphological, behavioural, and molecular data, aligns well with the multiple species criteria advocated by @DeQueiroz2011.
 
+- e.g. cytochrome-b (mtDNA)
+    - Carvalho et al. 2009. Phylogeny of Thylamys (Didelphimorphia, Didelphidae) species, with special reference to Thylamys karimii
+- cytochrome-b in rodents
+    - Re: GSC sensu Baker & Bradley 2006 (J. of Mammal. 87(4):643–662), Bradley & Baker 2001 (J. of Mammal. 82(4):960–973)
+- multi-locus work in Afro-tropical shrews
+    - cytochrome-b, among others,
+    - Jacquet et al. 2012. Zool. J. Linn. Soc. 166(3):672–687
+
 
 ## Mammal discoveries, 1975---2005
 
@@ -118,17 +126,10 @@ South African mammal species over this period include *`r paste(cape_sl_msw$Genu
 
 ![\label{taxa-thru-africa} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the three orders of mammal over the period 1975---2005 that had *any* new species found in that period. Not shown is Afrosoricidimorpha, which had one new species: *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`*, a golden mole [@Bronner2000] (see text). Data are from MSW3 (see text) [@MSW3].](ppt_fig_africa.png){ width=75% }
 
-- e.g. cytochrome-b (mtDNA)
-    - Carvalho et al. 2009. Phylogeny of Thylamys (Didelphimorphia, Didelphidae) species, with special reference to Thylamys karimii
-- cytochrome-b in rodents
-    - Re: GSC sensu Baker & Bradley 2006 (J. of Mammal. 87(4):643–662), Bradley & Baker 2001 (J. of Mammal. 82(4):960–973)
-- multi-locus work in Afro-tropical shrews
-    - cytochrome-b, among others,
-    - Jacquet et al. 2012. Zool. J. Linn. Soc. 166(3):672–687
-
 
 ## Modes of mammalian speciation
 
+...
 
 
 ## Concluding remarks
