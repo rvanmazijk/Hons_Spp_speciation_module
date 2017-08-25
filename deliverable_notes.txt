@@ -20,22 +20,18 @@ deliver <- function(your_group_of_choice,
         # FIXME
     }
 
-    new_taxa <- region %>%
-        map(get_new_taxa, taxa = your_group_of_choice)
+    new_taxa <- map(region,
+                    get_new_taxa, taxa = your_group_of_choice)
     modes_of_speciation <- ID_modes_of_speciation(new_taxa)
 
-    pres <- presentation(
-        new_taxa = new_taxa$taxa,
-        methods  = new_taxa$methods,
-        species_concepts = new_taxa$species_concepts,
-        modes_of_speciation = modes_of_speciation
-    )
+    pres <- presentation(new_taxa = new_taxa$taxa,
+                         methods  = new_taxa$methods,
+                         species_concepts = new_taxa$species_concepts,
+                         modes_of_speciation = modes_of_speciation)
     essay <- essay(pres)
     
-    return(list(
-        pres = pres,
-        essay = essay
-    ))
+    return(list(pres = pres,
+                essay = essay))
 
 }
 
