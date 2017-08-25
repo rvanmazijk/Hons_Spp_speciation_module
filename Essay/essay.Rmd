@@ -124,14 +124,12 @@ South African mammal species over this period include *`r paste(cape_sl_msw$Genu
 
 ## Modes of mammalian speciation
 
-Given the diversity of species concepts used (or ignore) in mammal alpha-taxonomy, and the seemingly similarly diverse lines of evidence used to delimit species, it is difficult to draw general conclusions about speciation processes 
+Given the diversity of species concepts used (or ignore) in mammal alpha-taxonomy, and the seemingly similarly diverse lines of evidence used to delimit species, it is difficult to draw general conclusions about speciation processes in mammals. Mammals are greatly morphologically and ecologically diverse taxon<!--ref!??-->. As such, it can be expected that there is to be a diversity of speciation modes exhibited in mammal populations. Ecologically relevant speciation processes (e.g. acoustic differentiation in bats<!--ref!--> and mouse lemus [@Zimmermann2014]) are often on a case-by-case basis<!--ref--> in the way that they manifest in real populations. In other words: their is disparity in speciation modes among mammals as a function of the functional differences between different mammal lineages<!--does this (=>) makes sense here?: (e.g. ordinal differences in Figure \ref{taxa-thru-time})-->.
 
 
 ## Concluding remarks
 
 - Molecular species delimitation is relevant to PSC/ESC/BSC
-- Ecologically relevant speciation processes (e.g. bats) are case-by-case
-- Little generality to be drawn about speciation from the alpha-taxonomic methods 
 - Genetic sequencing & PSC (or at least ESC)
 - Good taxonomic inflation!
 - Genomics is up-and-coming! e.g. Murphy et al. 2004
