@@ -6,7 +6,7 @@ output:
     latex_engine: xelatex
     fig_caption: true
 fontsize: 12pt
-geometry: margin = 0.75in, a4paper
+geometry: margin = 1in, a4paper
 mainfont: Times New Roman
 csl: harvard-university-of-cape-town-rvm_2017-08-15.csl
 bibliography: Spp_speciation_deliverable.bib
@@ -37,9 +37,10 @@ knitr::opts_chunk$set(echo = FALSE,
 knitr::opts_knit$set(root.dir = paste(here()))
 ```
 
-```{r source-msw3-script}
-# FIXME
+```{r source-msw3-script, include = FALSE, cache = FALSE}
+# (Can't cache (magrittr::not() seems to break?))
 source("msw3_analyses.R")
+# FIXME: use SE versions of `dplyr` verbs; e.g. filter()` => `filter_()`
 p_load(tidyverse, magrittr, here, stringr, glue, rjson)
 ```
 
@@ -103,15 +104,9 @@ For the most part, mammologists historically<!--when?--> followed (if only loose
 
 Morphology was the dominant method in mammal species delimitation prior to 1985 [@Baker2006]. Indeed, morpholgical differences between taxa are still influential in their taxonomy. Furthermore, allopatric populations of mammal that are morphologically distinct (whatever that may entail) are regularly treated as separate species. This concurs with the usage of the PSC above, where non-reproductively isolated taxa (e.g. grizzly and polar bears; lions and tigers) are treated as separate species<!--elaborate-->. Phenetics still common practice in mammal taxonomy, wherein morphological divergence between populations is numerically described. Species are then diagnosed as clusters in this quantitative trait-space<!--more!-->. Phenetics and morphology are often also the starting points of alpha-taxonomic research [e.g. @Lew2006; @Bronner2000], as it is more amenable to efficient, cheap study than molecular systematics.
 
-Early molecular work used in mammal taxonomy employed karyotype studies [e.g. @Bronner2000]---to delineate species on the basis of chromosomal traits [@Baker2006] (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't apply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered [@Zimmermann2014]. This does, however, contribute to taxonomic inflation.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity<!--elaborate-->. Furthermore, molecular systematic methods may reveal morphologically distinct populations to in fact be polymorphs of a single species [@Zimmermann2014]. In fact, @Zimmermann2014 applied a multi-evidence approach to delimiting cryptic mouse lemur species (*Microcebus spp.*) in Madagascar. This integrative approach, using the confluence of ecological, morphological, behavioural, and molecular data, aligns well with the multiple species criteria advocated by @DeQueiroz2011.
+Early molecular work used in mammal taxonomy employed karyotype studies [e.g. @Bronner2000]---to delineate species on the basis of chromosomal traits [@Baker2006] (e.g. diploid number, chromosome structure, arrangement). Allozymes and DNA sequencing methods arrived later. These molecular methods were costly in their infancy [@Baker2006], but soon became much more practical. The benefits of these methods is their greater objectivity, in that qualitatvely scored morphological traits are more subject to researchers' idiosyncrasies<!--ref--><!--doesn't apply as much to phenetics-->. The other benefit of characters divorced from observable morphology is that they can allow cryptic species to be uncovered [@Zimmermann2014]. This does, however, contribute to taxonomic inflation.<!--ref; is this bad? elaborate--> As @Rylands2012 point out (in reference to primates, but this easily pertains to many biota), taxonomic inflation may indeed represent a greater understanding of existing diversity<!--elaborate-->.
 
-- e.g. cytochrome-b (mtDNA)
-    - Carvalho et al. 2009. Phylogeny of Thylamys (Didelphimorphia, Didelphidae) species, with special reference to Thylamys karimii
-- cytochrome-b in rodents
-    - Re: GSC sensu Baker & Bradley 2006 (J. of Mammal. 87(4):643–662), Bradley & Baker 2001 (J. of Mammal. 82(4):960–973)
-- multi-locus work in Afro-tropical shrews
-    - cytochrome-b, among others,
-    - Jacquet et al. 2012. Zool. J. Linn. Soc. 166(3):672–687
+Furthermore, molecular systematic methods may reveal morphologically distinct populations to in fact be polymorphs of a single species [@Zimmermann2014]. In fact, @Zimmermann2014 applied a multi-evidence approach to delimiting cryptic mouse lemur species (*Microcebus spp.*) in Madagascar. This integrative approach, using the confluence of ecological, morphological, behavioural, and molecular data, aligns well with the multiple species criteria advocated by @DeQueiroz2011. A commonly used genetic marker in mammal molecular systematics is the mitochondrial sequence *cytochrome-b*---e.g. in opossums [@Carvalho2009], and rodent work using the GSC [@Baker2006; @Bradley2001]. Multi-locus genetic work is also employed [e.g. in Afro-tropical shrews @Jacquet2012], furthering the certainty and amount of evidence used to delimit species. The use of multiple genes, and indeed even whole genomes [@Murphy2004], in combination with traditional "visible" traits (e.g. ecology, range, morphology) is likely the ideal way to delineate new species [@Zimmermann2014; @DeQueiroz2011].
 
 
 ## Mammal discoveries, 1975---2005
@@ -124,12 +119,12 @@ South African mammal species over this period include *`r paste(cape_sl_msw$Genu
 
 ![\label{taxa-thru-time} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the eight most taxonomically active orders of mammal over the period 1975---2005. Data are from MSW3 (see text) [@MSW3]. Taxonomically "active" here implies that $\geq 10$ new species were described for an order over the 1975---2005 period. These eight orders are those that meet this criterion, such 533 species' discoveries are illustrated here. For reference, Dasyuromorphs are commonly referred to as Tasmanian devils and numbats, Didelphimorphs as opossums, Diprotodonts as koalas and wombats, and Soricomorphs as moles and shrews](ppt_fig.png){ width=65% }
 
-![\label{taxa-thru-africa} \footnotesize Bar-plots of the number of new species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the three orders of mammal over the period 1975---2005 that had *any* new species found in that period. Not shown is Afrosoricidimorpha, which had one new species: *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`*, a golden mole [@Bronner2000] (see text). Data are from MSW3 (see text) [@MSW3].](ppt_fig_africa.png){ width=75% }
+![\label{taxa-thru-africa} \footnotesize Bar-plots of the number of new African mammal species (\textit{sensu stricto}, excluding sub-specific additions) described each year in the three orders of mammal over the period 1975---2005 that had *any* new species found in that period. Not shown is Afrosoricidimorpha, which had one new species: *`r paste(SA_sl_msw$Genus, SA_sl_msw$Species)[1]`*, a golden mole [@Bronner2000] (see text). Data are from MSW3 (see text) [@MSW3].](ppt_fig_africa.png){ width=75% }
 
 
 ## Modes of mammalian speciation
 
-...
+Given the diversity of species concepts used (or ignore) in mammal alpha-taxonomy, and the seemingly similarly diverse lines of evidence used to delimit species, it is difficult to draw general conclusions about speciation processes 
 
 
 ## Concluding remarks
