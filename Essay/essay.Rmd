@@ -1,6 +1,5 @@
 ---
 title: "Alpha-taxonomy in world mammals"
-#subtitle: "Trends in methods, species concepts, and speciation study from the 1970s to today"
 output:
   pdf_document:
     latex_engine: xelatex
@@ -21,6 +20,16 @@ header-includes:
   - \setlength{\parskip}{0pt}
   - \renewcommand{\baselinestretch}{1.5}
 ---
+
+```{r TODO, include = FALSE}
+# TODO -------------------------------------------------------------------------
+# 2017-08-25 07:30
+
+# - fix in text species name r execs
+# - branch and pull for updated .bib
+# - fill in "elaborate"s
+# - proof read
+```
 
 ```{r msw3-script-setup, include = FALSE}
 rm(list = ls())
