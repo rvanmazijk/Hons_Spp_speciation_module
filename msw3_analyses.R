@@ -42,10 +42,10 @@ plot_new_taxa <- function(x, rank, from = 1975, ylab = "taxa", ymax = 22,
         x <- x[x[, by][[1]] %in% which_by, ]
     }
     x %>%
-        filter(TaxonLevel == rank,
-               Date >= from,
-               Order %in% if (is.null(which_orders)) x$Order
-                          else which_orders) %>%
+        filter_("TaxonLevel" == rank,
+                "Date" >= from,
+                "Order" %in% if (is.null(which_orders)) x$Order
+                             else which_orders) %>%
         ggplot() +
         geom_histogram(aes_string(x = "Date", fill = by),
                        bins = 2005 - from) +
@@ -371,6 +371,9 @@ afr_sl_msw <- msw %>%
            #Order %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
 summary(afr_sl_msw)
+msw %>%
+    filter(ID %in% afr_sl_msw$ID) %$%
+    paste(Author, Date, CitationName)
 
 if (do_plots) {
     plot_new_taxa(afr_sl_msw, "SPECIES",
