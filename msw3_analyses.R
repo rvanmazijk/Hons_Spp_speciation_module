@@ -128,13 +128,13 @@ if (do_plots) {
         save_new_taxa("SPECIES", suffix = "3", width = 5, height = 4)
     # Total no. new spp since 1975:
     msw %>%
-        filter_("TaxonLevel" == "SPECIES", Date >= 1975) %>%
+        filter_("TaxonLevel" == "SPECIES", "Date" >= 1975) %>%
         nrow()  # 564
     # And for the "cool" orders:
     msw %>%
         filter_("TaxonLevel" == "SPECIES",
-               Date >= 1975,
-               Order %in% get_the_coolest(msw, "Order")) %>%
+                "Date" >= 1975,
+                "Order" %in% get_the_coolest(msw, "Order")) %>%
         nrow()  # 533
     
     
@@ -159,13 +159,13 @@ if (do_plots) {
 
 richnesses <- msw %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975,
-           Order %in% get_the_coolest(msw, "Order")) %>% 
+            "Date" >= 1975,
+            "Order" %in% get_the_coolest(msw, "Order")) %>% 
     count(Order)
 new_spp_counts <- msw %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975,
-           Order %in% get_the_coolest(msw, "Order")) %>% 
+            "Date" >= 1975,
+            "Order" %in% get_the_coolest(msw, "Order")) %>% 
     select(Date, Order) %>%
     group_by(Order) %>%
     count(Date)
@@ -198,13 +198,13 @@ if (do_plots) {
 
 richnesses <- msw %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975,
-           Order %in% get_the_coolest(msw, "Order", cutoff = 2)) %>%
+            "Date" >= 1975,
+            "Order" %in% get_the_coolest(msw, "Order", cutoff = 2)) %>%
     count(Order)
 new_spp_counts <- msw %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975,
-           Order %in% get_the_coolest(msw, "Order", cutoff = 2)) %>% 
+            "Date" >= 1975,
+            "Order" %in% get_the_coolest(msw, "Order", cutoff = 2)) %>% 
     select(Date, Order) %>%
     group_by(Order) %>%
     count(Date)
@@ -236,8 +236,8 @@ if (do_plots) {
 
 new_spp_counts <- msw %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975,
-           Order %in% get_the_coolest(msw, "Order", cutoff = 2)) %>% 
+            "Date" >= 1975,
+            "Order" %in% get_the_coolest(msw, "Order", cutoff = 2)) %>% 
     select(Date, Order) %>%
     group_by(Order) %>%
     count(Date) %>%
@@ -286,7 +286,7 @@ if (do_plots) {
     
     # For species records since 1975
     msw %>%
-        filter_("TaxonLevel" == "SPECIES", Date >= 1975) %>%
+        filter_("TaxonLevel" == "SPECIES", "Date" >= 1975) %>%
         count(CitationName) %>%
         arrange(desc(n)) %T>%
         write.csv("msw3_CitationName_frequencies_sp_since1975.csv")
@@ -295,8 +295,8 @@ if (do_plots) {
     map(get_the_coolest(msw, "Order"), function(x) {
         msw %>%
             filter_("TaxonLevel" == "SPECIES",
-                   Date >= 1975,
-                   Order %in% x) %>%
+                    "Date" >= 1975,
+                    "Order" %in% x) %>%
             count(CitationName) %>%
             arrange(desc(n)) %T>%
             write.csv(glue("msw3_CitationName_frequencies_{x}_sp_since1975.csv"))
@@ -321,8 +321,8 @@ cape_msw %>%
 cape_sl_msw <- msw %>%
     search_all_columns("[Ww]estern [Cc]ape") %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975,
-           Order %in% get_the_coolest(msw, "Order")) %>%
+           "Date" >= 1975,
+           "Order" %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
 paste(cape_sl_msw$Genus, cape_sl_msw$Species)
 
@@ -330,7 +330,7 @@ paste(cape_sl_msw$Genus, cape_sl_msw$Species)
 SA_sl_msw <- msw %>%
     search_all_columns("[Ss]outh [Aa]frica") %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975) %>%
+           "Date" >= 1975) %>%
            #Order %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
 paste(SA_sl_msw$Genus, SA_sl_msw$Species)
@@ -367,7 +367,7 @@ transv_msw %>%
 afr_sl_msw <- msw %>%
     search_all_columns("[Aa]fr") %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975) %>%
+           "Date" >= 1975) %>%
            #Order %in% get_the_coolest(msw, "Order")) %>%
     select(ID, Order, Genus, Species, CitationName, Distribution)
 summary(afr_sl_msw)
@@ -400,13 +400,13 @@ if (do_plots) {
 # No. new spp. total?
 afr_sl_msw %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1975,
-           Order %in% get_the_coolest(msw, "Order")) %>% 
+           "Date" >= 1975,
+           "Order" %in% get_the_coolest(msw, "Order")) %>% 
     nrow()  # 523
 afr_sl_msw %>%
     filter_("TaxonLevel" == "SPECIES",
-           Date >= 1915,
-           Order %in% get_the_coolest(msw, "Order")) %>% 
+           "Date" >= 1915,
+           "Order" %in% get_the_coolest(msw, "Order")) %>% 
     nrow()  # 93
 
 
