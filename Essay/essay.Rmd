@@ -120,6 +120,52 @@ Furthermore, molecular systematic methods may reveal morphologically distinct po
 
 ## Mammal discoveries, 1975---2005
 
+```{r region-species}
+# Region information -----------------------------------------------------------
+
+# Cape region
+cape_msw <- filter(msw,
+                   TaxonLevel == "SPECIES",
+                   Date >= 1975,
+                   str_detect(Distribution, "Cape"))
+# Cape "all_column" search
+cape_sl_msw <- msw %>%
+    search_all_columns("[Ww]estern [Cc]ape") %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975,
+           Order %in% get_the_coolest(msw, "Order")) %>%
+    select(ID, Order, Genus, Species, CitationName, Distribution)
+
+# South Africa
+SA_sl_msw <- msw %>%
+    search_all_columns("[Ss]outh [Aa]frica") %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975) %>%
+           #Order %in% get_the_coolest(msw, "Order")) %>%
+    select(ID, Order, Genus, Species, CitationName, Distribution)
+
+# Africa
+afr_msw <- filter(msw,
+                  TaxonLevel == "SPECIES",
+                  Date >= 1975,
+                  str_detect(Distribution, "Africa"))
+
+# Appearing in Ann. Transvaal Mus. after 1975
+transv_msw <- filter(msw,
+                     TaxonLevel == "SPECIES",
+                     Date >= 1975,
+                     str_detect(CitationName, "Transvaal"))
+
+# Search "Afr" in all_columns
+afr_sl_msw <- msw %>%
+    search_all_columns("[Aa]fr") %>%
+    filter(TaxonLevel == "SPECIES",
+           Date >= 1975) %>%
+           #Order %in% get_the_coolest(msw, "Order")) %>%
+    select(ID, Order, Genus, Species, CitationName, Distribution)
+
+```
+
 *Mammal Species of the World, 3rd Edition* (MSW3) [@MSW3] is a reputable<!--ref?--> database of mammalian taxa (species, sub-specific, and super-specific) and information concerning their treatments (e.g. scientific name, authors' name and year described, original publication citation, distribution, etc. [@MSW3]) from 1702 to 2005 AD. This data product is a boon to the discussions here. Using the `.csv` file from the MSW3 webpage (<https://www.departments.bucknell.edu/biology/resources/msw3/>), I explored this dataset in `R` [@RCoreTeam2017], primarily using the `tidyverse` suite of packages for data exploration and visualisation [@Wickham2017]. Not only does MSW3 enable exploration of mammal taxonomic discovery through time, it also facilitated easier literature searches, providing common journals in which mammal descriptions are published.
 
 Discoveries of new mammal species over this 30 year period are dominated by rodents and bats (Figure \ref{taxa-thru-time}). It is thus interesting that, in the Cape, only one new mammal species was described in the the period 1975 to 2005 [@Meester1978]: *`r paste(cape_sl_msw$Genus, cape_sl_msw$Species)`*, from the order `r cape_sl_msw$Order`, discovered around Knysna. This shrew species was first delimited on the basis of its morphology and geographic range, distinct from those of its relatives [@Meester1978].
@@ -142,7 +188,7 @@ Given the diversity of species concepts used (or ignore) in mammal alpha-taxonom
 - Genetic sequencing & PSC (or at least ESC)
 - Good taxonomic inflation!
 - Genomics is up-and-coming! e.g. Murphy et al. 2004
-
+- #FutureStudies
 
 \noindent \hrulefill
 
