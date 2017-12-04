@@ -272,11 +272,13 @@
 	"expanded_folders":
 	[
 		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module",
-		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module/Essay",
-		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module/Misc_deliverable_papers"
+		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module/Essay"
 	],
 	"file_history":
 	[
+		"/Users/ruanvanmazijk/Downloads/McAfee Agent 5.0.5 for Mac (UCT network)/McAfee EndPoint Security (UCT Network).txt",
+		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module/deliverable_notes.txt",
+		"/Users/ruanvanmazijk/Dropbox/Hons_Spp_speciation_module/Essay/Spp_speciation_deliverable.bib",
 		"/Users/ruanvanmazijk/Downloads/poly-veg-chi-for-Michelle_weird-indentation_2017-08-23.R",
 		"/Users/ruanvanmazijk/Dropbox/Notes_from_VinoVarsity3.txt",
 		"/Users/ruanvanmazijk/Documents/UCT/Hons/iv_Theory_essay/Hons-theory-essay/IEEE.csl",
@@ -401,14 +403,11 @@
 		"/Applications/new_txt_app_junk/new_txt_backend.sh",
 		"/Applications/new_txt_app_junk/new_txt2.sh",
 		"/Applications/new_txt_app_junk/dynamic_name.sh",
-		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/i. Palaeobiology (ACT)/whale_evol_2017-05-22.txt",
-		"/Users/ruanvanmazijk/Downloads/download (1).sh",
-		"/Users/ruanvanmazijk/Documents/R/R_pkgs/tidyverse/NEWS.md",
-		"/Users/ruanvanmazijk/Documents/UCT/Misc./Rlogo.svg"
+		"/Users/ruanvanmazijk/Documents/UCT/Hons/ii_Elective_modules/i. Palaeobiology (ACT)/whale_evol_2017-05-22.txt"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
@@ -562,7 +561,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 265.0,
+	"side_bar_width": 219.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
